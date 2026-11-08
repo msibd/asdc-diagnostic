@@ -90,8 +90,8 @@
     "semantic_hash": ""
   },
   "next.config.ts": {
-    "mtime": 1794082372.9105854,
-    "seen": 1794082725.4735773,
+    "mtime": 1794086334.812559,
+    "seen": 1794116089.972766,
     "ast_hash": "b08af491f85d92a47db03da758096a7d",
     "semantic_hash": ""
   },
@@ -102,15 +102,15 @@
     "semantic_hash": ""
   },
   "pnpm-workspace.yaml": {
-    "mtime": 1794025865.164619,
-    "seen": 1794080797.6321177,
-    "ast_hash": "c0e2364cf0e969cb2f4b5c008932f254",
+    "mtime": 1794114062.678514,
+    "seen": 1794116089.9729717,
+    "ast_hash": "f46a9fe4bc73ed845269eb996d1f4355",
     "semantic_hash": ""
   },
   "prisma.config.ts": {
-    "mtime": 1793733535.0175202,
-    "seen": 1794080797.6321201,
-    "ast_hash": "37a423604e3d47ab79c853243c85e830",
+    "mtime": 1794116067.9431243,
+    "seen": 1794116089.972975,
+    "ast_hash": "4f26cdfb843cef245ec04384564b78ca",
     "semantic_hash": ""
   },
   "prisma/seed-demo.ts": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "src/app/(public)/about/_components/about-view.tsx": {
-    "mtime": 1794065616.4290254,
-    "seen": 1794080797.6321943,
-    "ast_hash": "b9ee1705226fdd5d02a4f0e8980130d9",
+    "mtime": 1794083747.1665623,
+    "seen": 1794116089.9794571,
+    "ast_hash": "50f4ffe75090366fb6fb5e2bf84cd8c8",
     "semantic_hash": ""
   },
   "src/app/(public)/about/page.tsx": {
@@ -342,9 +342,9 @@
     "semantic_hash": ""
   },
   "src/app/(public)/doctors/_components/doctor-directory.tsx": {
-    "mtime": 1794065616.4326768,
-    "seen": 1794080797.632203,
-    "ast_hash": "37df468440de460409914266feee786b",
+    "mtime": 1794083747.198298,
+    "seen": 1794116089.9801261,
+    "ast_hash": "fd693d643fb3056778ca6ff285c63742",
     "semantic_hash": ""
   },
   "src/app/(public)/doctors/_components/doctor-photo.tsx": {
@@ -354,21 +354,21 @@
     "semantic_hash": ""
   },
   "src/app/(public)/doctors/_components/doctor-profile.tsx": {
-    "mtime": 1794057097.959078,
-    "seen": 1794080797.6322067,
-    "ast_hash": "366902764f712ae60368987392100719",
+    "mtime": 1794083747.2297666,
+    "seen": 1794116089.9803212,
+    "ast_hash": "186de038216170c3cd2f39c974491625",
     "semantic_hash": ""
   },
   "src/app/(public)/doctors/_components/doctor-types.ts": {
-    "mtime": 1794031413.8948984,
-    "seen": 1794080797.6322083,
-    "ast_hash": "642cca38742507b057fb84406b93c6c2",
+    "mtime": 1794086098.327768,
+    "seen": 1794116089.9803448,
+    "ast_hash": "64d721960813aaee8cac8e9d003a4a34",
     "semantic_hash": ""
   },
   "src/app/(public)/doctors/_components/doctors-shell.tsx": {
-    "mtime": 1794081517.186182,
-    "seen": 1794082725.481773,
-    "ast_hash": "9e7a43bdb6347f594f809f4d310d59c7",
+    "mtime": 1794086098.327768,
+    "seen": 1794116089.9803488,
+    "ast_hash": "6471ecfc4c48ab8e90647321fffb19b1",
     "semantic_hash": ""
   },
   "src/app/(public)/doctors/_components/doctors-skeleton.tsx": {
@@ -930,15 +930,15 @@
     "semantic_hash": ""
   },
   "src/app/public_website/components/booking-form.tsx": {
-    "mtime": 1794065616.3383327,
-    "seen": 1794080797.6324122,
-    "ast_hash": "e3ab0e7eb00612a9e9e2429516c0a4f0",
+    "mtime": 1794084394.2552319,
+    "seen": 1794116090.0053186,
+    "ast_hash": "12d7678376564f75b2401e4659f39088",
     "semantic_hash": ""
   },
   "src/app/public_website/components/clinic-website.tsx": {
-    "mtime": 1794065723.5123024,
-    "seen": 1794080797.632414,
-    "ast_hash": "a8ee5a38bf30dbd7f4b976754ba39944",
+    "mtime": 1794086098.327768,
+    "seen": 1794116090.0053222,
+    "ast_hash": "34fdd1007451c61a872f5376f0f8cb75",
     "semantic_hash": ""
   },
   "src/app/public_website/components/gallery-management.tsx": {
@@ -948,9 +948,9 @@
     "semantic_hash": ""
   },
   "src/app/public_website/components/hero-service-slider.tsx": {
-    "mtime": 1794059566.77262,
-    "seen": 1794080797.6324177,
-    "ast_hash": "811adc6dc3db262daae225de291d0bf4",
+    "mtime": 1794083747.3467734,
+    "seen": 1794116090.0055888,
+    "ast_hash": "3bf00750429c8aec0c99acbc8b84a213",
     "semantic_hash": ""
   },
   "src/app/public_website/components/layout-icons.tsx": {
@@ -960,9 +960,9 @@
     "semantic_hash": ""
   },
   "src/app/public_website/components/public-header.tsx": {
-    "mtime": 1794082291.1101694,
-    "seen": 1794082725.5015035,
-    "ast_hash": "c518ed3a11ffccecd5f37056a96208cf",
+    "mtime": 1794083747.3969767,
+    "seen": 1794116090.0057952,
+    "ast_hash": "8e5074bd721abed20ffbcb980ce8a1d8",
     "semantic_hash": ""
   },
   "src/app/public_website/components/public-language.tsx": {
@@ -972,9 +972,9 @@
     "semantic_hash": ""
   },
   "src/app/public_website/components/public-services.tsx": {
-    "mtime": 1794059566.5741677,
-    "seen": 1794080797.632426,
-    "ast_hash": "4ed584e24d83b83ec0927db0b1cbe6d7",
+    "mtime": 1794084379.9494233,
+    "seen": 1794116090.005998,
+    "ast_hash": "664d2a51ce0edcdb2932885debacfb70",
     "semantic_hash": ""
   },
   "src/app/public_website/components/review-management.tsx": {
@@ -1008,9 +1008,9 @@
     "semantic_hash": ""
   },
   "src/app/public_website/components/website-layout-editor.tsx": {
-    "mtime": 1794059583.8519244,
-    "seen": 1794080797.632438,
-    "ast_hash": "cf01a80e2ae762653c47100864937d6c",
+    "mtime": 1794086098.327768,
+    "seen": 1794116090.007251,
+    "ast_hash": "0fc932f45071715123da686b46b7e6ff",
     "semantic_hash": ""
   },
   "src/app/public_website/page.tsx": {
@@ -1032,9 +1032,9 @@
     "semantic_hash": ""
   },
   "src/app/public_website/queries/doctor-queries.ts": {
-    "mtime": 1794031413.8948984,
-    "seen": 1794080797.6324506,
-    "ast_hash": "a9eb2c1ac50c93f72503ed9b08c9712e",
+    "mtime": 1794086098.327768,
+    "seen": 1794116090.0078566,
+    "ast_hash": "5fb7dfd542de1e9824ccd45208cd4f13",
     "semantic_hash": ""
   },
   "src/app/robots.ts": {
@@ -1182,9 +1182,9 @@
     "semantic_hash": ""
   },
   "src/lib/clinic-realtime.ts": {
-    "mtime": 1793992441.2226288,
-    "seen": 1794080797.6325004,
-    "ast_hash": "82c0cf859aa6cba84c9c12462cc29818",
+    "mtime": 1794116067.900644,
+    "seen": 1794116090.0117767,
+    "ast_hash": "d21212bb673e5986b4b78a61dbdac706",
     "semantic_hash": ""
   },
   "src/lib/contact-rules.ts": {
@@ -1974,9 +1974,9 @@
     "semantic_hash": ""
   },
   "src/modules/website/schemas/website-layout.ts": {
-    "mtime": 1794059583.850837,
-    "seen": 1794080797.6328354,
-    "ast_hash": "8f39fda5a971b7f6b23356437fa9f6ec",
+    "mtime": 1794086098.327768,
+    "seen": 1794116090.0387628,
+    "ast_hash": "0c7102d2a35119d42840e333beaa29c5",
     "semantic_hash": ""
   },
   "src/stores/dashboard-ui-store.ts": {
@@ -2196,9 +2196,9 @@
     "semantic_hash": ""
   },
   "tests/website-content.test.ts": {
-    "mtime": 1794030621.3053095,
-    "seen": 1794080797.632914,
-    "ast_hash": "1d150cb430cb79e83be6a2e4cda4a648",
+    "mtime": 1794086142.4730248,
+    "seen": 1794116090.0444672,
+    "ast_hash": "0d115c171da7e2fff904c6ed5b6ea2a2",
     "semantic_hash": ""
   },
   "tsconfig.json": {
@@ -2337,6 +2337,18 @@
     "mtime": 1793711069.8278344,
     "seen": 1794080797.6329596,
     "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": ""
+  },
+  "src/app/public_website/components/announcement-ticker.tsx": {
+    "mtime": 1794086142.414811,
+    "seen": 1794116090.0053139,
+    "ast_hash": "eb347fd2478289df668853d99ad4acb3",
+    "semantic_hash": ""
+  },
+  "tests/announcements.test.ts": {
+    "mtime": 1794084763.2842739,
+    "seen": 1794116090.0392525,
+    "ast_hash": "445f69794bd1e652d71cd6565b58e8d9",
     "semantic_hash": ""
   },
   "pnpm-lock.yaml": {

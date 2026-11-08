@@ -31,7 +31,8 @@ async function ensureListener() {
   if (listenerState.client) return;
   if (listenerState.connection) return listenerState.connection;
 
-  const connectionString = process.env.DATABASE_URL;
+  // LISTEN needs a session connection; a transaction pooler (DATABASE_URL on Supabase) drops it.
+  const connectionString = process.env.DIRECT_URL ?? process.env.DATABASE_URL;
   if (!connectionString) {
     throw new Error("DATABASE_URL is not set; clinic realtime updates cannot connect.");
   }
