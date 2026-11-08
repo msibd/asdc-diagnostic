@@ -4,6 +4,7 @@ import { authorize } from "@/lib/admin-session";
 import { apiError, parseQuery } from "@/lib/api";
 import { addClinicDays, getClinicDateKey } from "@/lib/clinic-date";
 import { prisma } from "@/lib/prisma";
+import { isVoiceEnabled } from "@/modules/voice/voice-service";
 
 const querySchema = z.object({ days: z.coerce.number().int().min(1).max(14).default(2) });
 
@@ -26,6 +27,7 @@ export async function GET(request: Request) {
   });
   return NextResponse.json({
     range: { from: today, days: query.data.days },
+    voiceEnabled: await isVoiceEnabled(),
     reminders: appointments.map((appointment) => ({ ...appointment, dateTime: appointment.dateTime.toISOString() })),
   });
 }

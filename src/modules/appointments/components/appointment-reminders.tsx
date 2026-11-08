@@ -1,6 +1,6 @@
 "use client";
 
-import { BellRing, MessageCircle, Phone } from "lucide-react";
+import { BellRing, MessageCircle, Phone, PhoneCall } from "lucide-react";
 import { useEffect, useState } from "react";
 import { formatClinicDate, formatClinicTime } from "@/lib/clinic-date";
 
@@ -17,16 +17,33 @@ export default function AppointmentReminders() {
   const [open, setOpen] = useState(false);
   const [days, setDays] = useState(2);
   // One result per look-ahead setting; "loading" is simply "no result for the current setting yet".
-  const [result, setResult] = useState<{ days: number; reminders: Reminder[]; error: string } | null>(null);
+  const [result, setResult] = useState<{ days: number; reminders: Reminder[]; error: string; voiceEnabled?: boolean } | null>(null);
+  const [calling, setCalling] = useState(false);
+  const [callResult, setCallResult] = useState<{ ok: boolean; message: string } | null>(null);
+
+  async function voiceCallAll() {
+    if (!window.confirm("Play the reminder voice call to every patient in this list? Each call costs money. Patients already called today are skipped.")) return;
+    setCalling(true);
+    setCallResult(null);
+    try {
+      const response = await fetch("/api/voice/reminders", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ days }) });
+      const body = await response.json() as { message?: string; error?: string };
+      setCallResult({ ok: response.ok, message: body.message ?? body.error ?? "Unable to place reminder calls." });
+    } catch {
+      setCallResult({ ok: false, message: "Unable to place reminder calls." });
+    } finally {
+      setCalling(false);
+    }
+  }
 
   useEffect(() => {
     if (!open) return;
     const controller = new AbortController();
     fetch(`/api/appointments/reminders?days=${days}`, { cache: "no-store", signal: controller.signal })
       .then(async (response) => {
-        const body = await response.json() as { reminders?: Reminder[]; error?: string };
+        const body = await response.json() as { reminders?: Reminder[]; error?: string; voiceEnabled?: boolean };
         if (!response.ok) throw new Error(body.error ?? "Unable to load reminders.");
-        setResult({ days, reminders: body.reminders ?? [], error: "" });
+        setResult({ days, reminders: body.reminders ?? [], error: "", voiceEnabled: body.voiceEnabled });
       })
       .catch((reason: unknown) => {
         if (!controller.signal.aborted) setResult({ days, reminders: [], error: reason instanceof Error ? reason.message : "Unable to load reminders." });
@@ -64,6 +81,14 @@ export default function AppointmentReminders() {
             <>
               <h3 className="reminder-heading">Upcoming bookings ({reminders.length})</h3>
               {!reminders.length && <p className="reminder-empty">No upcoming bookings in this period.</p>}
+              {current?.voiceEnabled && reminders.length > 0 && (
+                <div className="reminder-actions">
+                  <button type="button" className="button-secondary" disabled={calling} onClick={() => void voiceCallAll()}>
+                    <PhoneCall size={13} /> {calling ? "Calling…" : `Voice call all (${reminders.length})`}
+                  </button>
+                </div>
+              )}
+              {callResult && <div className={`rounded-card border px-4 py-3 text-sm ${callResult.ok ? "border-success-border bg-success-bg text-success-text" : "border-danger-border bg-danger-bg text-danger-text"}`} role="status">{callResult.message}</div>}
               <ul className="reminder-list">
                 {reminders.map((item) => (
                   <li key={item.id}>

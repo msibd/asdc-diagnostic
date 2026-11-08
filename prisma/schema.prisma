@@ -839,6 +839,22 @@ model SmsConfiguration {
   updatedAt           DateTime @updatedAt
 }
 
+// AwajDigital voice calls (appointment reminders). Attempts are written to SmsLog with VOICE_* purposes.
+model VoiceConfiguration {
+  id              String    @id @default("primary")
+  encryptedToken  String?
+  sender          String    @default("")
+  // Name of the pre-recorded, approved voice in the AwajDigital panel that is played as the reminder.
+  reminderVoice   String    @default("")
+  enabled         Boolean   @default(false)
+  lastTestAt      DateTime?
+  lastTestStatus  String?
+  lastTestMessage String?
+  updatedById     String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
 // Every SMS attempt and settings change. The phone number is masked for display and hashed for
 // counting; the full number and the message text are not stored.
 model SmsLog {

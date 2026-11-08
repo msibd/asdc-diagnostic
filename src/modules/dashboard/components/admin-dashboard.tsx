@@ -59,6 +59,7 @@ const PatientDirectory = dynamic(() => import("@/modules/patients/components/pat
 const ClinicOperations = dynamic(() => import("@/modules/clinic/components/clinic-operations"));
 const FinanceSection = dynamic(() => import("@/modules/finance/components/finance-section"));
 const SmsSettings = dynamic(() => import("@/modules/sms/components/sms-settings"));
+const VoiceSettings = dynamic(() => import("@/modules/voice/components/voice-settings"));
 const EmailSettings = dynamic(() => import("@/modules/email/components/email-settings"));
 const AccessSection = dynamic(() => import("@/modules/access/components/access-section"));
 const OrdersSection = dynamic(() => import("@/modules/orders/components/orders-section"));
@@ -629,7 +630,7 @@ export default function AdminDashboard({
               {section === "billing" && <ClinicOperations section="billing" onNotice={notify} />}
               {section === "reports" && <ClinicOperations section="reports" onNotice={notify} />}
               {section === "expenses" && <FinanceSection onNotice={notify} />}
-              {section === "sms" && <SmsSettings onNotice={notify} />}
+              {section === "sms" && <div className="grid gap-4"><VoiceSettings onNotice={notify} /><SmsSettings onNotice={notify} /></div>}
               {section === "email" && <EmailSettings onNotice={notify} />}
               {section === "access" && <AccessSection onNotice={notify} />}
               {section === "inventory" && <InventorySection onNotice={notify} />}

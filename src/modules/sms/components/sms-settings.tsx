@@ -16,6 +16,7 @@ type Form = Pick<Settings, "senderId" | "appointmentTemplate" | "perNumberDailyL
 
 const PURPOSE: Record<string, string> = {
   APPOINTMENT_BOOKED: "Appointment SMS", TEST_SMS: "Test SMS", CONNECTION_TEST: "Connection test", SETTINGS_UPDATED: "Settings saved",
+  VOICE_REMINDER: "Voice reminder call", VOICE_CONNECTION_TEST: "Voice connection test", VOICE_SETTINGS_UPDATED: "Voice settings saved",
 };
 const STATUS_BADGE: Record<string, string> = {
   SENT: "badge badge-success", SUCCESS: "badge badge-success", FAILED: "badge badge-danger", SKIPPED: "badge badge-warning", INFO: "badge badge-info",

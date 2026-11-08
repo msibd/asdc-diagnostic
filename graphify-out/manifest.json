@@ -456,9 +456,9 @@
     "semantic_hash": ""
   },
   "src/app/api/appointments/reminders/route.ts": {
-    "mtime": 1793992441.3800683,
-    "seen": 1794080797.632238,
-    "ast_hash": "14d9397d5670fe13a6088d221cbbf3c5",
+    "mtime": 1794133623.0932357,
+    "seen": 1794134032.3139951,
+    "ast_hash": "5b7a4d1e3eec96f3860d5c6a8ddd211f",
     "semantic_hash": ""
   },
   "src/app/api/appointments/route.ts": {
@@ -1320,9 +1320,9 @@
     "semantic_hash": ""
   },
   "src/modules/appointments/components/appointment-reminders.tsx": {
-    "mtime": 1793997941.3348646,
-    "seen": 1794080797.6325421,
-    "ast_hash": "a6dc1f84066f88723989316491e8b54d",
+    "mtime": 1794133801.2022057,
+    "seen": 1794134032.342483,
+    "ast_hash": "5bcbb5c997ec3d4205259bdb95532618",
     "semantic_hash": ""
   },
   "src/modules/appointments/components/appointment-table.tsx": {
@@ -1458,9 +1458,9 @@
     "semantic_hash": ""
   },
   "src/modules/dashboard/components/admin-dashboard.tsx": {
-    "mtime": 1794068478.7966163,
-    "seen": 1794080797.6325848,
-    "ast_hash": "02bd1cfa2c7d8e11f8f2b7bd014a9d01",
+    "mtime": 1794133708.0492008,
+    "seen": 1794134032.3463724,
+    "ast_hash": "e923925ba47c3b0b7cca6aefb695fae1",
     "semantic_hash": ""
   },
   "src/modules/dashboard/components/appointment-details-dialog.tsx": {
@@ -1914,9 +1914,9 @@
     "semantic_hash": ""
   },
   "src/modules/sms/components/sms-settings.tsx": {
-    "mtime": 1794038860.6813538,
-    "seen": 1794080797.632816,
-    "ast_hash": "6197bb8b2dc6e05f4bbf85242bc6b163",
+    "mtime": 1794133710.3416953,
+    "seen": 1794134032.3623414,
+    "ast_hash": "d2dcaf91a907dcd7d6b8eaa3c5263c8e",
     "semantic_hash": ""
   },
   "src/modules/sms/phone.ts": {
@@ -2355,6 +2355,270 @@
     "mtime": 1794116629.211779,
     "seen": 1794117258.8606555,
     "ast_hash": "32e6c11b4698f9c5bc3657f57ddbab06",
+    "semantic_hash": ""
+  },
+  ".claude/launch.json": {
+    "mtime": 1794120547.5137289,
+    "seen": 1794134032.2998762,
+    "ast_hash": "c1bda21acca450de5b61676256f8b591",
+    "semantic_hash": ""
+  },
+  "src/app/api/voice/reminders/route.ts": {
+    "mtime": 1794133620.876891,
+    "seen": 1794134032.3266847,
+    "ast_hash": "5788426bfdb37647be41d51dfa4df625",
+    "semantic_hash": ""
+  },
+  "src/app/api/voice/settings/route.ts": {
+    "mtime": 1794133603.5641234,
+    "seen": 1794134032.3266883,
+    "ast_hash": "2ce2e3674a3ac7c36a98c77da336fdb4",
+    "semantic_hash": ""
+  },
+  "src/app/api/voice/test-connection/route.ts": {
+    "mtime": 1794133603.6107078,
+    "seen": 1794134032.326691,
+    "ast_hash": "e03e109b2ad6c61d1b7a094c1b2a16b5",
+    "semantic_hash": ""
+  },
+  "src/modules/voice/awajdigital.ts": {
+    "mtime": 1794133504.3196301,
+    "seen": 1794134032.362855,
+    "ast_hash": "d23e7aaba1c0d9b1d8f67f774763a836",
+    "semantic_hash": ""
+  },
+  "src/modules/voice/components/voice-settings.tsx": {
+    "mtime": 1794133687.207624,
+    "seen": 1794134032.3628585,
+    "ast_hash": "8f3c3a3f1ea0057a80fb9145ec1f40d0",
+    "semantic_hash": ""
+  },
+  "src/modules/voice/voice-service.ts": {
+    "mtime": 1794133584.2573552,
+    "seen": 1794134032.362861,
+    "ast_hash": "53f7f73e377b4f66dfe4d4e8d5fb9bc5",
+    "semantic_hash": ""
+  },
+  "tests/voice.test.ts": {
+    "mtime": 1794133881.7761157,
+    "seen": 1794134032.372176,
+    "ast_hash": "c125c1fd79c526c5b7c150c7bdfe0758",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/01_DASHBOARD_REVIEW.md": {
+    "mtime": 1794119871.6226864,
+    "seen": 1794134032.3748589,
+    "ast_hash": "e857b47d6b67f869b2cac3770dcf8998",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/02_FEATURE_AUDIT.md": {
+    "mtime": 1794119973.0959191,
+    "seen": 1794134032.3748636,
+    "ast_hash": "9cd72938a0abe1ec8da43be46544c283",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/ASH_SHIFA_DMS_Client_User_Manual_BN.md": {
+    "mtime": 1794120258.8220592,
+    "seen": 1794134032.3748662,
+    "ast_hash": "1af175b5c7f9ac668cc867b886ff3b23",
+    "semantic_hash": ""
+  },
+  "docs/deployment/deployment-guide.html": {
+    "mtime": 1794118234.3901513,
+    "seen": 1794134032.37487,
+    "ast_hash": "6683653c6140f0dfe36088bd3fa4b2ba",
+    "semantic_hash": ""
+  },
+  "ASH_SHIFA_DMS_Client_User_Manual_BN.pdf": {
+    "mtime": 1794120538.9074025,
+    "seen": 1794134032.3750527,
+    "ast_hash": "1ae8e600349e028b741649318cbf4ec1",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/ASH_SHIFA_DMS_Client_User_Manual_BN.pdf": {
+    "mtime": 1794120694.0070431,
+    "seen": 1794134032.3750558,
+    "ast_hash": "74bd3085ac0933094d82b6405e57b479",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/ASH_SHIFA_DMS_Quick_Start_Guide_BN.pdf": {
+    "mtime": 1794120697.6958473,
+    "seen": 1794134032.375059,
+    "ast_hash": "2c9620c5941cfbeb0f1784f596846ad9",
+    "semantic_hash": ""
+  },
+  "docs/deployment/ASDC-Deployment-Guide.pdf": {
+    "mtime": 1794118254.817438,
+    "seen": 1794134032.3750613,
+    "ast_hash": "13eed6cf12150fb0922beb392d3eee85",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/01-login.jpg": {
+    "mtime": 1794119727.4013882,
+    "seen": 1794134032.3752394,
+    "ast_hash": "45c08f45aa873d638ec9e01f8cf943f9",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/02-dashboard-top.jpg": {
+    "mtime": 1794119727.594487,
+    "seen": 1794134032.375242,
+    "ast_hash": "ed14dfa0b4fbd21aa4bfabcf035dc6f3",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/03-dashboard-bottom.jpg": {
+    "mtime": 1794119727.7447157,
+    "seen": 1794134032.3752444,
+    "ast_hash": "c37f72018d12aaeb9b7a71eb3c5b78b3",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/04-sidebar-admin.jpg": {
+    "mtime": 1794119727.8947241,
+    "seen": 1794134032.3752477,
+    "ast_hash": "4af1fae03baaed9f0f1fe8deda44b4ac",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/05-bookings.jpg": {
+    "mtime": 1794119728.044542,
+    "seen": 1794134032.3752499,
+    "ast_hash": "7bf6a20de3091b543065773bb0ae5f83",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/06-patients.jpg": {
+    "mtime": 1794119728.264931,
+    "seen": 1794134032.3752522,
+    "ast_hash": "4cc53f7d5ed06debe98d924d156149bb",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/07-register-patient.jpg": {
+    "mtime": 1794119728.3977573,
+    "seen": 1794134032.3752549,
+    "ast_hash": "50b14afaafa44d7d2c971e7403b7f808",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/08-orders.jpg": {
+    "mtime": 1794119728.5883417,
+    "seen": 1794134032.375257,
+    "ast_hash": "a0caa6e9325eedb76395f92aeb58de74",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/09-new-order.jpg": {
+    "mtime": 1794119728.7397738,
+    "seen": 1794134032.3752596,
+    "ast_hash": "957dbd3c23471811c749f19939cdbfdf",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/10-order-collect.jpg": {
+    "mtime": 1794119728.8848445,
+    "seen": 1794134032.375262,
+    "ast_hash": "4506e0fcea42fceb0c22e11ac682b7e1",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/11-receive-samples.jpg": {
+    "mtime": 1794119729.0144615,
+    "seen": 1794134032.3752642,
+    "ast_hash": "83c5b3c1f507676ed45cca7f9768e4c6",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/12-result-entry.jpg": {
+    "mtime": 1794119729.1652224,
+    "seen": 1794134032.375266,
+    "ast_hash": "71927f1c716e9085a808939257569727",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/13-result-approve.jpg": {
+    "mtime": 1794119729.2946782,
+    "seen": 1794134032.375268,
+    "ast_hash": "36eb4fc6e80a84006cf075bd16cf88ee",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/14-lab-report.jpg": {
+    "mtime": 1794119729.4194238,
+    "seen": 1794134032.3752701,
+    "ast_hash": "e796d61f23118dcd317c5d7f3f814c1d",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/15-billing.jpg": {
+    "mtime": 1794119729.5448847,
+    "seen": 1794134032.3752723,
+    "ast_hash": "0e5084b0f972863daf5d3a991d6a93ab",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/16-record-payment.jpg": {
+    "mtime": 1794119729.7167256,
+    "seen": 1794134032.3752744,
+    "ast_hash": "e0d307041bcbcc202cd9be2d5349b173",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/17-services.jpg": {
+    "mtime": 1794119729.869459,
+    "seen": 1794134032.3752763,
+    "ast_hash": "9d4879f9590407eabd4285c5d203023b",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/18-doctors.jpg": {
+    "mtime": 1794119730.00109,
+    "seen": 1794134032.375278,
+    "ast_hash": "de57da20b3272cb9bda85272e2321339",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/19-expenses.jpg": {
+    "mtime": 1794119730.1375887,
+    "seen": 1794134032.3752806,
+    "ast_hash": "a2de5915e01dd273b7aa6afc012ecb0a",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/20-daily-summary.jpg": {
+    "mtime": 1794119730.2679372,
+    "seen": 1794134032.3752828,
+    "ast_hash": "dbe73a3e343109d397fbcb12b81bbd6b",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/21-cash-closing.jpg": {
+    "mtime": 1794119730.4013548,
+    "seen": 1794134032.375285,
+    "ast_hash": "eb7f718b01a0e952eb4adffb3caf3e56",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/22-reports.jpg": {
+    "mtime": 1794119730.542842,
+    "seen": 1794134032.3752875,
+    "ast_hash": "5263f4e800c450e2c7a9f82d2cf49009",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/23-inventory.jpg": {
+    "mtime": 1794119730.7071254,
+    "seen": 1794134032.37529,
+    "ast_hash": "ab6cffbcbcc103852336fa86502ff465",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/24-users.jpg": {
+    "mtime": 1794119730.818442,
+    "seen": 1794134032.3752916,
+    "ast_hash": "698a1d39588a084ca0cd6487f3c1e41a",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/25-roles.jpg": {
+    "mtime": 1794119730.9389715,
+    "seen": 1794134032.375294,
+    "ast_hash": "7ba7eef3c8f192b9a37fbc3c0e8a642a",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/26-website-content.jpg": {
+    "mtime": 1794119731.0464973,
+    "seen": 1794134032.3752966,
+    "ast_hash": "ce00a3a476abbe28bb9a7d9d20ffa1d9",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/27-sms-settings.jpg": {
+    "mtime": 1794119731.188602,
+    "seen": 1794134032.375299,
+    "ast_hash": "fcdcc5897a08ae7470a859279a58c7bc",
+    "semantic_hash": ""
+  },
+  "docs/client-manual/screenshots/28-security.jpg": {
+    "mtime": 1794119731.3229375,
+    "seen": 1794134032.3753014,
+    "ast_hash": "ea9b2a54751072511f6adb941d72b03c",
     "semantic_hash": ""
   },
   "pnpm-lock.yaml": {
