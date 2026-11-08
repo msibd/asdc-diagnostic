@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<title>Deployment নির্দেশিকা — Ash-Shifa Diagnostic Centre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;600;700&display=block" rel="stylesheet">
+<style>
+  @page {
+    size: A4;
+    margin: 18mm 16mm 20mm;
+    @bottom-center { content: "পৃষ্ঠা " counter(page) " / " counter(pages); font-family: "Hind Siliguri", "Nirmala UI", sans-serif; font-size: 9pt; color: #6b7a8c; }
+    @top-right { content: "Ash-Shifa Diagnostic Centre · Deployment নির্দেশিকা"; font-family: "Hind Siliguri", "Nirmala UI", sans-serif; font-size: 8.5pt; color: #8a97a8; }
+  }
+  @page :first { margin: 0; @bottom-center { content: none; } @top-right { content: none; } }
+
+  :root {
+    --brand: #c2410c; --brand-2: #f97316; --soft: #fff1e6; --navy: #0d1b2e; --ink: #1f2c40; --ink-2: #4a5668;
+    --line: #e6dcd3; --amber: #fff6e5; --amber-line: #f3dfb0; --amber-ink: #7a4f00; --red: #fdeceb; --red-line: #f2b8b3; --red-ink: #8a2a24;
+    --blue: #e8f0fd; --blue-line: #b9cff3; --blue-ink: #1e4f9a; --green: #e7f6ec; --green-line: #b6e2c3; --green-ink: #1d5e33;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; font-family: "Hind Siliguri", "Nirmala UI", "Inter", sans-serif; color: var(--ink); font-size: 10.8pt; line-height: 1.72; }
+  .en, code, pre, .mono { font-family: "Inter", "Segoe UI", sans-serif; }
+  code { background: #f4ece5; border-radius: 4px; padding: 0 4px; font-size: 9.2pt; font-family: Consolas, "Cascadia Mono", monospace; }
+  pre { background: #0d1b2e; color: #f6e7da; border-radius: 3mm; padding: 3mm 4mm; font-family: Consolas, "Cascadia Mono", monospace; font-size: 8.8pt; line-height: 1.55; white-space: pre-wrap; word-break: break-all; margin: 2mm 0 4mm; break-inside: avoid; }
+  h1, h2, h3 { line-height: 1.3; color: var(--navy); }
+  h2 { font-size: 19pt; margin: 0 0 4mm; padding-bottom: 2.5mm; border-bottom: 3px solid var(--brand); break-after: avoid; }
+  h2 .num { display: inline-grid; place-items: center; width: 10mm; height: 10mm; margin-right: 3mm; border-radius: 50%; background: linear-gradient(135deg, var(--brand-2), var(--brand)); color: #fff; font-size: 12pt; vertical-align: middle; }
+  h3 { font-size: 13pt; margin: 6mm 0 2mm; color: var(--brand); break-after: avoid; }
+  h4 { font-size: 11pt; margin: 4mm 0 1.5mm; break-after: avoid; }
+  p { margin: 0 0 2.5mm; }
+  ul, ol { margin: 0 0 3mm; padding-left: 6mm; }
+  li { margin-bottom: 1mm; }
+  section.chapter { break-before: page; }
+  .lead { font-size: 11.5pt; color: var(--ink-2); }
+
+  .cover { height: 297mm; padding: 26mm 20mm; display: flex; flex-direction: column; justify-content: space-between;
+    background: radial-gradient(ellipse at 90% 10%, rgba(249,115,22,.35), transparent 55%), linear-gradient(160deg, #0d1b2e 0%, #3b1f12 55%, #c2410c 100%); color: #fff; }
+  .cover .brand { display: flex; align-items: center; gap: 5mm; font-size: 15pt; font-weight: 600; }
+  .cover .logo { width: 16mm; height: 16mm; border-radius: 4mm; background: linear-gradient(135deg, #fb923c, #ea580c); display: grid; place-items: center; font-size: 20pt; }
+  .cover h1 { color: #fff; font-size: 32pt; margin: 0 0 5mm; line-height: 1.25; }
+  .cover .sub { font-size: 13.5pt; color: #ffe2cc; max-width: 155mm; }
+  .cover .meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; font-size: 10pt; }
+  .cover .meta div { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); border-radius: 3mm; padding: 3.5mm 4mm; }
+  .cover .meta b { display: block; color: #fdba74; font-size: 9pt; font-weight: 600; }
+
+  .box { border-radius: 3mm; padding: 3.5mm 4.5mm; margin: 3mm 0 4mm; border: 1px solid; break-inside: avoid; }
+  .box > strong:first-child { display: block; margin-bottom: 1mm; }
+  .tip { background: var(--green); border-color: var(--green-line); color: var(--green-ink); }
+  .warn { background: var(--amber); border-color: var(--amber-line); color: var(--amber-ink); }
+  .danger { background: var(--red); border-color: var(--red-line); color: var(--red-ink); }
+  .info { background: var(--blue); border-color: var(--blue-line); color: var(--blue-ink); }
+
+  table { width: 100%; border-collapse: collapse; margin: 2mm 0 4mm; font-size: 9.6pt; break-inside: auto; }
+  th, td { border: 1px solid var(--line); padding: 2mm 2.5mm; vertical-align: top; text-align: left; }
+  th { background: linear-gradient(135deg, #fff1e6, #e8f0fd); color: var(--navy); font-weight: 600; }
+  tr { break-inside: avoid; }
+
+  .toc { columns: 2; column-gap: 10mm; font-size: 11pt; }
+  .toc li { break-inside: avoid; }
+  .steps { counter-reset: s; list-style: none; padding-left: 0; }
+  .steps > li { counter-increment: s; position: relative; padding-left: 10mm; margin-bottom: 2.5mm; break-inside: avoid; }
+  .steps > li::before { content: counter(s); position: absolute; left: 0; top: .5mm; width: 7mm; height: 7mm; border-radius: 50%; background: var(--brand); color: #fff; display: grid; place-items: center; font-size: 9pt; font-weight: 700; }
+  .path { display: inline-block; background: #0d1b2e; color: #ffe2cc; border-radius: 3px; padding: 0 5px; font-family: "Inter", sans-serif; font-size: 9pt; }
+
+  .flow { display: grid; grid-template-columns: 1fr 9mm 1fr 9mm 1fr; align-items: center; gap: 1.5mm; margin: 4mm 0 5mm; break-inside: avoid; }
+  .flow .node { border-radius: 3.5mm; padding: 3.5mm; color: #fff; min-height: 30mm; }
+  .flow .node b { display: block; font-size: 11.5pt; margin-bottom: 1mm; }
+  .flow .node span { font-size: 9pt; line-height: 1.5; display: block; }
+  .flow .gh { background: linear-gradient(135deg, #334155, #0f172a); }
+  .flow .vc { background: linear-gradient(135deg, #f97316, #c2410c); }
+  .flow .sb { background: linear-gradient(135deg, #10b981, #047857); }
+  .flow .arrow { text-align: center; font-size: 16pt; color: var(--ink-2); }
+
+  .err { border: 1px solid var(--line); border-left: 5px solid #dc2626; border-radius: 3mm; padding: 3mm 4.5mm; margin: 0 0 4.5mm; break-inside: avoid; background: #fff; }
+  .err h4 { margin: 0 0 1.5mm; color: var(--navy); }
+  .err .msg { display: block; background: var(--red); color: var(--red-ink); border-radius: 2mm; padding: 1.5mm 3mm; font-family: Consolas, monospace; font-size: 8.8pt; margin: 1mm 0 2mm; word-break: break-word; }
+  .err dl { margin: 0; display: grid; grid-template-columns: 22mm 1fr; gap: 1mm 3mm; }
+  .err dt { font-weight: 700; color: var(--brand); }
+  .err dd { margin: 0; }
+  .check { list-style: none; padding-left: 0; }
+  .check li { padding-left: 7mm; position: relative; }
+  .check li::before { content: "☐"; position: absolute; left: 0; color: var(--brand); font-weight: 700; }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="brand"><div class="logo">⚗</div> Ash-Shifa Diagnostic Centre</div>
+  <div>
+    <h1>Deployment নির্দেশিকা</h1>
+    <p class="sub">GitHub, Vercel আর Supabase দিয়ে clinic system কীভাবে অনলাইনে চালু করা হয়েছে, পথে কোন কোন error এসেছিল ও কীভাবে সমাধান হয়েছে, আর ভবিষ্যতে নিজে কীভাবে update ও deploy করবেন।</p>
+  </div>
+  <div class="meta">
+    <div><b>তৈরির তারিখ</b>৮ নভেম্বর ২০২৬</div>
+    <div><b>Hosting</b>Vercel (Mumbai · bom1)</div>
+    <div><b>Database</b>Supabase PostgreSQL (Mumbai)</div>
+  </div>
+</section>
+
+<section class="chapter">
+  <h2>সূচিপত্র</h2>
+  <ol class="toc">
+    <li>পুরো ব্যবস্থার ছবি</li>
+    <li>কোথায় কী আছে (account ও নাম)</li>
+    <li>Environment variables</li>
+    <li>প্রথমবার deploy: ধাপে ধাপে যা করা হয়েছে</li>
+    <li>Error ও তার সমাধান (১০টা)</li>
+    <li>প্রতিদিনের update deploy করা</li>
+    <li>Database-এ নতুন migration চালানো</li>
+    <li>Admin account বানানো / password reset</li>
+    <li>সমস্যা হলে কোথায় দেখবেন</li>
+    <li>নিরাপত্তার নিয়ম</li>
+    <li>বাকি কাজ</li>
+    <li>শূন্য থেকে নতুন করে deploy (checklist)</li>
+  </ol>
+
+  <div class="box info"><strong>এই নির্দেশিকা কার জন্য</strong>
+  আপনি যদি code বদলে site update করতে চান, নতুন কম্পিউটার বা নতুন account-এ আবার deploy করতে চান, বা কোনো error এলে নিজে ঠিক করতে চান, এই নির্দেশিকা আপনার জন্য। প্রতিটা ধাপে কোথায় click করতে হবে আর কী লিখতে হবে তা দেওয়া আছে।</div>
+
+  <div class="box danger"><strong>Password কখনো এই নির্দেশিকায় বা chat-এ লিখবেন না</strong>
+  নিচের সব উদাহরণে password-এর জায়গায় <code>PASSWORD</code> লেখা আছে। আসল password শুধু Vercel-এর Environment Variables-এ, Supabase-এ আর আপনার নিজের কাছে থাকবে।</div>
+
+  <h2 style="margin-top:8mm"><span class="num">১</span>পুরো ব্যবস্থার ছবি</h2>
+  <p class="lead">আপনি code বদলে GitHub-এ পাঠান। Vercel সেটা নিজে থেকে build করে site চালু করে। Site-এর সব data থাকে Supabase-এর database-এ।</p>
+  <div class="flow">
+    <div class="node gh"><b>GitHub</b><span>msibd/asdc-diagnostic<br>code এখানে থাকে। <code style="background:#1e293b;color:#fff">main</code> branch-এ push = নতুন deploy</span></div>
+    <div class="arrow">→</div>
+    <div class="node vc"><b>Vercel</b><span>project: asdc-diagnostic<br>build করে, website চালায়। Server: Mumbai (bom1)</span></div>
+    <div class="arrow">→</div>
+    <div class="node sb"><b>Supabase</b><span>project: asdc-diagnostic<br>PostgreSQL database, Mumbai (ap-south-1)</span></div>
+  </div>
+  <p>Site-এর ঠিকানা: <span class="path">https://asdc-diagnostic.vercel.app</span> (Vercel project-এর Domains-এ আসল ঠিকানা দেখা যায়)।</p>
+</section>
+
+<section class="chapter">
+  <h2><span class="num">২</span>কোথায় কী আছে</h2>
+  <table>
+    <tr><th style="width:24%">জিনিস</th><th style="width:38%">নাম / ঠিকানা</th><th>মন্তব্য</th></tr>
+    <tr><td>GitHub repository</td><td><code>github.com/msibd/asdc-diagnostic</code> (private)</td><td>Branch <code>main</code>-এ push করলেই deploy হয়।</td></tr>
+    <tr><td>Vercel account</td><td>user <code>msibd</code>, scope <code>msibds-projects</code>, <b>Hobby (free)</b> plan</td><td>vercel.com-এ GitHub দিয়ে login।</td></tr>
+    <tr><td>Vercel project</td><td><code>asdc-diagnostic</code></td><td>Settings, Environment Variables, Deployments সব এখানে।</td></tr>
+    <tr><td>Supabase project</td><td><code>asdc-diagnostic</code>, ref <code>xelbpwwphgkhthozkriy</code>, region <code>ap-south-1</code></td><td>Account Vercel-এর মাধ্যমে তৈরি, তাই Vercel → Storage → <b>Open in Supabase</b> দিয়ে ঢুকতে হতে পারে।</td></tr>
+    <tr><td>Supabase dashboard</td><td><code>supabase.com/dashboard/project/xelbpwwphgkhthozkriy</code></td><td>Database password reset: Project Settings → Database।</td></tr>
+    <tr><td>Database host</td><td><code>aws-0-ap-south-1.pooler.supabase.com</code></td><td>Port <b>6543</b> = app-এর জন্য, port <b>5432</b> = migration-এর জন্য।</td></tr>
+    <tr><td>Database user</td><td><code>postgres.xelbpwwphgkhthozkriy</code></td><td>শুধু <code>postgres</code> লিখলে কাজ করবে না।</td></tr>
+    <tr><td>Admin login</td><td><code>mmbdsafik@gmail.com</code></td><td>Password শুধু আপনি জানেন।</td></tr>
+  </table>
+
+  <h3>Code-এ deployment-সংক্রান্ত file</h3>
+  <table>
+    <tr><th style="width:32%">File</th><th>কাজ</th></tr>
+    <tr><td><code>vercel.json</code></td><td>Build command (<code>pnpm build</code>) আর server region (<code>bom1</code> = Mumbai)। Dashboard-এর setting-এর চেয়ে এটাই আগে খাটে।</td></tr>
+    <tr><td><code>pnpm-workspace.yaml</code></td><td><code>allowBuilds</code>: কোন package install-এর সময় নিজের script চালাতে পারবে। <code>prisma</code> আর <code>@prisma/engines</code> অবশ্যই <code>true</code>।</td></tr>
+    <tr><td><code>prisma.config.ts</code></td><td>Migration চালানোর সময় <code>DIRECT_URL</code> থাকলে সেটা, না থাকলে <code>DATABASE_URL</code> ব্যবহার করে।</td></tr>
+    <tr><td><code>src/lib/prisma.ts</code></td><td>Vercel-এ প্রতিটা server সর্বোচ্চ ৩টা database connection খোলে, অলস connection ৫ সেকেন্ডে বন্ধ হয়।</td></tr>
+    <tr><td><code>src/app/api/realtime/route.ts</code></td><td>Vercel-এ realtime বন্ধ (204 ফেরত দেয়); পাতাগুলো ৩০ সেকেন্ড পরপর ও focus-এ refresh হয়।</td></tr>
+    <tr><td><code>.env.vercel</code></td><td>Vercel-এ paste করার variable-এর খসড়া। <b>Git-এ যায় না</b>, শুধু আপনার কম্পিউটারে থাকে।</td></tr>
+  </table>
+</section>
+
+<section class="chapter">
+  <h2><span class="num">৩</span>Environment variables</h2>
+  <p>Vercel → project → <span class="path">Settings → Environment Variables</span>। প্রতিটার পাশে <b>Production</b> (আর চাইলে Preview) টিক থাকতে হবে।</p>
+  <table>
+    <tr><th style="width:27%">নাম</th><th style="width:43%">মান (উদাহরণ)</th><th>কেন লাগে</th></tr>
+    <tr><td><code>DATABASE_URL</code></td><td><code>postgresql://postgres.xelbpwwphgkhthozkriy:PASSWORD@aws-0-ap-south-1.pooler.supabase.com:<b>6543</b>/postgres</code></td><td>Site-এর সব সাধারণ কাজ। <b>Port অবশ্যই 6543</b> (transaction pooler)।</td></tr>
+    <tr><td><code>DIRECT_URL</code></td><td>একই, কিন্তু শেষে <code>:<b>5432</b>/postgres</code></td><td>Migration চালানোর জন্য (session connection লাগে)।</td></tr>
+    <tr><td><code>BETTER_AUTH_SECRET</code></td><td>৩২+ অক্ষরের random লেখা</td><td>Login session সুরক্ষিত রাখে। বদলালে সবাই logout হয়ে যাবে।</td></tr>
+    <tr><td><code>BETTER_AUTH_URL</code></td><td><code>https://asdc-diagnostic.vercel.app</code></td><td>Site-এর আসল ঠিকানা। নিজের domain লাগালে এটাও বদলাতে হবে।</td></tr>
+    <tr><td><code>EMAIL_ENCRYPTION_KEY</code></td><td>৩২ byte-এর random base64</td><td>Email (SMTP) password database-এ গোপন রাখে। <b>হারালে বা বদলালে</b> আগের সেভ করা email password আর পড়া যাবে না।</td></tr>
+    <tr><td><code>ADMIN_NAME</code>, <code>ADMIN_EMAIL</code></td><td><code>Administrator</code>, <code>mmbdsafik@gmail.com</code></td><td>শুধু প্রথম admin বানানোর সময় লাগে।</td></tr>
+    <tr><td><code>TRUSTED_PROXY_HOPS</code></td><td><code>1</code></td><td>Rate limit-এর জন্য ভিজিটরের আসল IP পড়া।</td></tr>
+  </table>
+  <div class="box tip"><strong>নতুন random secret বানানোর command</strong>
+  <pre>node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"</pre></div>
+  <div class="box warn"><strong>Variable বদলালে নিজে থেকে deploy হয় না</strong>
+  Save করার পর <span class="path">Deployments → সবার উপরের deploy → ⋯ → Redeploy</span> চাপতে হবে। না চাপলে পুরনো মান নিয়েই site চলবে।</div>
+  <div class="box warn"><strong>Password-এ চিহ্ন থাকলে</strong>
+  URL-এর ভেতরে <code>@ # / % ? &amp;</code> থাকলে URL ভেঙে যায়। Database password শুধু অক্ষর ও সংখ্যা দিয়ে রাখুন (যেমন <code>Asdc2026Clinic9x</code>)।</div>
+</section>
+
+<section class="chapter">
+  <h2><span class="num">৪</span>প্রথমবার deploy: ধাপে ধাপে যা করা হয়েছে</h2>
+  <ol class="steps">
+    <li><b>Online database বানানো।</b> Supabase-এ নতুন free project <code>asdc-diagnostic</code>, region Mumbai (<code>ap-south-1</code>)। Local কম্পিউটারের database Vercel থেকে পৌঁছানো যায় না, তাই online database লাগে।</li>
+    <li><b>Git ঠিক করা।</b> Project-এর <code>.git</code> folder ভাঙা ছিল, তাই <code>git init -b main</code> দিয়ে নতুন করে শুরু, তারপর প্রথম commit। <code>.env*</code> আর log file commit-এ যায়নি তা যাচাই করা হয়েছে।</li>
+    <li><b>GitHub-এ পাঠানো।</b> github.com/new-এ খালি private repo বানিয়ে:
+<pre>git remote add origin https://github.com/msibd/asdc-diagnostic.git
+git push -u origin main</pre></li>
+    <li><b>Secret বানানো।</b> <code>BETTER_AUTH_SECRET</code> আর <code>EMAIL_ENCRYPTION_KEY</code> random বানিয়ে <code>.env.vercel</code> file-এ রাখা হয়েছে (git-এ যায় না)।</li>
+    <li><b>Vercel-এ import।</b> <span class="path">vercel.com/new → msibd/asdc-diagnostic → Import</span>। Environment Variables-এ <code>.env.vercel</code>-এর লেখা paste করে আসল password বসানো, তারপর Deploy।</li>
+    <li><b>Build-এর error ঠিক করা।</b> pnpm, database password, connection limit ইত্যাদি সমস্যা পরপর এসেছে, পরের অধ্যায়ে বিস্তারিত।</li>
+    <li><b>Admin account বানানো।</b> Online database-এ কোনো user ছিল না। Admin বানানো হয়েছে (অধ্যায় ৮)।</li>
+    <li><b>Connection-এর সমস্যা স্থায়ীভাবে ঠিক করা।</b> <code>DATABASE_URL</code> port 6543, <code>DIRECT_URL</code> port 5432, connection pool ছোট করা, Vercel-এ realtime বন্ধ, region Mumbai।</li>
+    <li><b>শুরুর data।</b> Test catalog, website-এর লেখা আর demo data বসানোর script চালু করা হয়েছে (অধ্যায় ১১ দেখুন)।</li>
+  </ol>
+</section>
+
+<section class="chapter">
+  <h2><span class="num">৫</span>Error ও তার সমাধান</h2>
+  <p class="lead">Deploy করার সময় যে ১০টা সমস্যা এসেছিল, যে ক্রমে এসেছিল। একই error আবার দেখলে এখান থেকে মিলিয়ে নিন।</p>
+
+  <div class="err">
+    <h4>১. Git repository চিনছে না</h4>
+    <span class="msg">fatal: not a git repository (or any of the parent directories): .git</span>
+    <dl><dt>কারণ</dt><dd><code>.git</code> folder-এ শুধু <code>objects/</code> আর <code>refs/</code> ছিল; <code>HEAD</code> ও <code>config</code> হারিয়ে গিয়েছিল।</dd>
+    <dt>সমাধান</dt><dd><code>git init -b main</code>, তারপর নতুন commit। পুরনো ইতিহাস ফেরত আসেনি।</dd></dl>
+  </div>
+
+  <div class="err">
+    <h4>২. Vercel connector project বানাতে পারছে না</h4>
+    <span class="msg">403 forbidden: Trying to access resource under scope "msibds-projects"</span>
+    <dl><dt>কারণ</dt><dd>Claude-এর Vercel connector-কে account-এ অনুমতি দেওয়ার link দুবার approve করার পরও অনুমতি কার্যকর হয়নি।</dd>
+    <dt>সমাধান</dt><dd>Vercel dashboard (vercel.com/new) থেকে নিজে GitHub repo import করা। এটাই সবচেয়ে সহজ ও নিশ্চিত পথ।</dd></dl>
+  </div>
+
+  <div class="err">
+    <h4>৩. pnpm install থেমে যাচ্ছে</h4>
+    <span class="msg">ERR_PNPM_IGNORED_BUILDS · Command "pnpm install" exited with 1</span>
+    <dl><dt>কারণ</dt><dd><code>pnpm-workspace.yaml</code>-এ <code>prisma</code> আর <code>@prisma/engines</code>-এর পাশে উত্তরের বদলে "set this to true or false" লেখা ছিল। নিজের কম্পিউটারে pnpm শুধু সতর্ক করে, Vercel-এ থেমে যায়।</dd>
+    <dt>সমাধান</dt><dd>দুটোকে <code>true</code> করা:
+<pre>allowBuilds:
+  '@prisma/engines': true
+  esbuild: true
+  prisma: true
+  sharp: false
+  unrs-resolver: false</pre>
+    নিজের কম্পিউটারে যাচাই: <code>pnpm install --frozen-lockfile</code></dd></dl>
+  </div>
+
+  <div class="err">
+    <h4>৪. Database password মিলছে না</h4>
+    <span class="msg">P1000: Authentication failed against database server, the provided database credentials for `postgres` are not valid.</span>
+    <dl><dt>কারণ</dt><dd><code>DATABASE_URL</code>-এ ভুল password, <code>[YOUR-PASSWORD]</code> বা <code>[ ]</code> থেকে গেছে, অথবা password-এ চিহ্ন আছে।</dd>
+    <dt>সমাধান</dt><dd>Supabase → Project Settings → Database → <b>Reset database password</b> (শুধু অক্ষর+সংখ্যা)। Vercel-এ <code>DATABASE_URL</code> edit করে নতুন password বসানো, তারপর Redeploy। Username অবশ্যই <code>postgres.xelbpwwphgkhthozkriy</code>।</dd></dl>
+  </div>
+
+  <div class="err">
+    <h4>৫. Variable যোগ করা যাচ্ছে না</h4>
+    <span class="msg">A variable with the name `DATABASE_URL` already exists for the targets `production` and `preview`</span>
+    <dl><dt>কারণ</dt><dd>পুরনোটা edit না করে একই নামে নতুন variable যোগ করার চেষ্টা।</dd>
+    <dt>সমাধান</dt><dd>নতুন row-টা <b>−</b> দিয়ে মুছে, তালিকায় থাকা <code>DATABASE_URL</code>-এর <b>⋯ → Edit</b>। Save, তারপর Redeploy।</dd></dl>
+  </div>
+
+  <div class="err">
+    <h4>৬. Admin login হচ্ছে না (প্রথমবার)</h4>
+    <span class="msg">ইমেইল অথবা পাসওয়ার্ড সঠিক নয়।</span>
+    <dl><dt>কারণ</dt><dd>Online database নতুন, তাতে কোনো user-ই ছিল না। নিজের কম্পিউটারের admin শুধু local database-এ।</dd>
+    <dt>সমাধান</dt><dd>Online database-এ admin বানানো (অধ্যায় ৮)। প্রথম চেষ্টা ব্যর্থ হয়েছিল কারণ database password-এর জায়গায় admin password দেওয়া হয়েছিল। দুটো আলাদা password!</dd></dl>
+  </div>
+
+  <div class="err">
+    <h4>৭. Dashboard-এ data আসছে না, বা login মাঝে মাঝে ব্যর্থ</h4>
+    <span class="msg">Couldn't load clinic data · Failed to execute 'json' on 'Response': Unexpected end of JSON input</span>
+    <dl><dt>কারণ</dt><dd>Supabase-এর log: <code>(EMAXCONNSESSION) max clients reached in session mode - pool_size: 15</code>। Port 5432 (session) একসাথে মাত্র ১৫টা connection নেয়; Vercel-এর প্রতিটা server ১০টা পর্যন্ত খুলত। জায়গা না পেয়ে server crash করে খালি উত্তর দিত। Login-এর সময় এমন হলে "password ভুল" দেখায়।</dd>
+    <dt>সমাধান</dt><dd><code>DATABASE_URL</code>-এর port <b>5432 → 6543</b> (transaction pooler, অনেক বেশি connection নেয়); নতুন <code>DIRECT_URL</code> = 5432 (migration-এর জন্য); code-এ প্রতিটা server-এর pool সর্বোচ্চ ৩। পুরনো deploy-এর আটকে থাকা connection Supabase থেকে বন্ধ করা (অধ্যায় ৯)।</dd></dl>
+  </div>
+
+  <div class="err">
+    <h4>৮. Build migration ধাপে ব্যর্থ</h4>
+    <span class="msg">Error: Schema engine error: · Command "pnpm prisma migrate deploy &amp;&amp; pnpm build" exited with 1</span>
+    <dl><dt>কারণ</dt><dd>পুরনো deploy সব session connection ধরে রাখায় build-এর migration connection পাচ্ছিল না।</dd>
+    <dt>সমাধান</dt><dd><code>vercel.json</code>-এ build command শুধু <code>pnpm build</code>। নতুন migration থাকলে এখন হাতে চালাতে হয় (অধ্যায় ৭)।</dd></dl>
+  </div>
+
+  <div class="err">
+    <h4>৯. Realtime connection স্থায়ীভাবে আটকে রাখছে</h4>
+    <span class="msg">port 6543 ঠিক থাকার পরও session mode-এ connection ফিরিয়ে দেওয়া হচ্ছিল</span>
+    <dl><dt>কারণ</dt><dd>প্রতিটা খোলা dashboard ৩টা realtime সংযোগ খোলে, আর প্রতিটা Vercel server database-এর একটা session connection স্থায়ীভাবে ধরে রাখত (<code>LISTEN</code>)।</dd>
+    <dt>সমাধান</dt><dd>Vercel-এ realtime বন্ধ (endpoint 204 দেয়, browser আর চেষ্টা করে না)। পাতাগুলো ৩০ সেকেন্ড পরপর ও tab-এ ফিরলে refresh হয়। Local-এ realtime আগের মতো চলে।</dd></dl>
+  </div>
+
+  <div class="err">
+    <h4>১০. Server আমেরিকায় চলছিল</h4>
+    <span class="msg">Supabase log-এ connection আসছিল 54.242.x.x (US East) থেকে</span>
+    <dl><dt>কারণ</dt><dd>Vercel-এর default region আমেরিকা, database Mumbai-তে, তাই প্রতিটা query-তে দেরি।</dd>
+    <dt>সমাধান</dt><dd><code>vercel.json</code>-এ <code>"regions": ["bom1"]</code>। এখন connection আসে Mumbai (13.x, 65.x, 43.205.x) থেকে।</dd></dl>
+  </div>
+</section>
+
+<section class="chapter">
+  <h2><span class="num">৬</span>প্রতিদিনের update deploy করা</h2>
+  <p class="lead">Code বদলানোর পর শুধু GitHub-এ push করুন। Vercel ২-৩ মিনিটে নিজে থেকেই নতুন version চালু করবে।</p>
+  <ol class="steps">
+    <li>নিজের কম্পিউটারে পরীক্ষা: <pre>pnpm install
+pnpm exec tsc --noEmit
+pnpm build</pre></li>
+    <li>Commit ও push: <pre>git add -A
+git commit -m "কী বদলেছেন তার ছোট বর্ণনা"
+git push</pre></li>
+    <li>Vercel → <b>Deployments</b>-এ নতুন deploy <b>Building → Ready</b> হওয়া দেখুন। Error হলে deploy-এ click করে <b>Build Logs</b>-এর লাল অংশ পড়ুন, অধ্যায় ৫-এ মিলিয়ে দেখুন।</li>
+    <li>Site-এ <b>Ctrl+Shift+R</b> দিয়ে নতুন version দেখুন।</li>
+  </ol>
+  <div class="box tip"><strong>পুরনো version-এ ফেরত যাওয়া (Rollback)</strong>
+  নতুন version-এ বড় সমস্যা হলে: Deployments → আগের যে deploy ঠিক চলছিল → <b>⋯ → Promote to Production</b>। এক click-এ পুরনো version ফিরে আসে। (Database-এর পরিবর্তন এতে ফেরে না।)</div>
+  <div class="box info"><strong>Claude দিয়ে করাতে চাইলে</strong>
+  "এই পরিবর্তন commit করে push করো" বললেই হবে। কিন্তু Vercel connector-এর অনুমতি কাজ না করায় Vercel-এর ভেতরের setting আপনাকে নিজে বদলাতে হবে।</div>
+</section>
+
+<section class="chapter">
+  <h2><span class="num">৭</span>Database-এ নতুন migration চালানো</h2>
+  <p>যখন <code>prisma/schema.prisma</code> বদলে নতুন migration বানানো হয় (<code>prisma/migrations/</code>-এ নতুন folder), তখন online database-এও সেটা বসাতে হবে। Build এখন নিজে থেকে এটা করে না।</p>
+  <div class="box warn"><strong>ক্রম গুরুত্বপূর্ণ</strong>
+  আগে migration online database-এ চালান, <b>তারপর</b> code push করুন। উল্টো করলে নতুন code পুরনো database-এ চলে error দেবে।</div>
+  <p>Project folder-এ PowerShell খুলে (port <b>5432</b>, <code>PASSWORD</code>-এর জায়গায় database password):</p>
+<pre>$env:DIRECT_URL = "postgresql://postgres.xelbpwwphgkhthozkriy:PASSWORD@aws-0-ap-south-1.pooler.supabase.com:5432/postgres"
+pnpm prisma migrate status
+pnpm prisma migrate deploy
+Remove-Item Env:DIRECT_URL</pre>
+  <p><code>migrate status</code> দেখায় কোনগুলো বাকি; <code>migrate deploy</code> সেগুলো বসায়। শেষ লাইনটা password মুছে দেয়। এরপর <code>git push</code>।</p>
+  <div class="box info"><strong>এখনকার অবস্থা</strong> Repo-তে ৩৪টা migration, online database-এ ৩৪টাই বসানো।</div>
+</section>
+
+<section class="chapter">
+  <h2><span class="num">৮</span>Admin account বানানো / password reset</h2>
+  <h3>নতুন database-এ প্রথম admin</h3>
+<pre>$env:DATABASE_URL = "postgresql://postgres.xelbpwwphgkhthozkriy:PASSWORD@aws-0-ap-south-1.pooler.supabase.com:6543/postgres"
+$env:ADMIN_NAME = "Administrator"
+$env:ADMIN_EMAIL = "mmbdsafik@gmail.com"
+pnpm db:seed</pre>
+  <p>Script জিজ্ঞেস করবে <b>"Create administrator password"</b>: এখানে login-এর নতুন password (কমপক্ষে ১০ অক্ষর) দিন। প্রথমে যে <code>PASSWORD</code> বসিয়েছেন সেটা <b>database password</b>; এখানে যেটা দেবেন সেটা <b>login password</b>। দুটো আলাদা।</p>
+  <h3>Admin password ভুলে গেলে</h3>
+  <p>উপরের মতো <code>$env:DATABASE_URL</code> বসিয়ে:</p>
+<pre>pnpm admin:reset-password</pre>
+  <div class="box tip"><strong>কাজ শেষে</strong> PowerShell window বন্ধ করে দিন। <code>$env:</code> দিয়ে বসানো মান শুধু ওই window-তে থাকে, বন্ধ করলে মুছে যায়। <code>.env.local</code> বদলাতে হয় না।</div>
+</section>
+
+<section class="chapter">
+  <h2><span class="num">৯</span>সমস্যা হলে কোথায় দেখবেন</h2>
+  <table>
+    <tr><th style="width:30%">লক্ষণ</th><th style="width:30%">কোথায় দেখবেন</th><th>সম্ভাব্য সমাধান</th></tr>
+    <tr><td>Build ব্যর্থ (Error)</td><td>Vercel → Deployments → deploy → Build Logs</td><td>অধ্যায় ৫-এর error-এর সাথে মেলান।</td></tr>
+    <tr><td>পাতা খোলে, কিন্তু "Couldn't load" / খালি data</td><td>Supabase → Logs → <b>Pooler</b> (Supavisor)</td><td><code>EMAXCONN</code> দেখলে <code>DATABASE_URL</code> port 6543 কিনা দেখুন; আটকে থাকা connection বন্ধ করুন (নিচে)।</td></tr>
+    <tr><td>Login সব সময় "ভুল password"</td><td>Supabase → Table Editor → <code>user</code></td><td>User আছে কিনা দেখুন; না থাকলে অধ্যায় ৮।</td></tr>
+    <tr><td>Server error (500)</td><td>Vercel → project → <b>Logs</b> (Runtime)</td><td>লাল লাইনের বার্তা পড়ুন।</td></tr>
+    <tr><td>Variable বদলালাম, কিছু বদলাল না</td><td>Vercel → Deployments</td><td>Save-এর পরে Redeploy হয়েছে কিনা দেখুন।</td></tr>
+  </table>
+  <h3>আটকে থাকা database connection বন্ধ করা</h3>
+  <p>Supabase → <b>SQL Editor</b>-এ চালান। এটা শুধু অলস (idle) connection বন্ধ করে, কোনো data মোছে না; app দরকার হলে আবার connect করে।</p>
+<pre>select count(*) filter (where pg_terminate_backend(pid)) as closed
+from pg_stat_activity
+where application_name = 'Supavisor' and state = 'idle';</pre>
+  <h3>এখন কতগুলো connection খোলা</h3>
+<pre>select application_name, state, count(*)
+from pg_stat_activity
+where datname = 'postgres'
+group by 1, 2 order by 3 desc;</pre>
+</section>
+
+<section class="chapter">
+  <h2><span class="num">১০</span>নিরাপত্তার নিয়ম</h2>
+  <ul>
+    <li><b>Password কোথাও লিখবেন না</b>: chat, screenshot, code, GitHub, এই নির্দেশিকা। Screenshot-এ password দেখা গেলে সেটা সাথে সাথে বদলান।</li>
+    <li><b><code>.env.local</code> ও <code>.env.vercel</code> কখনো commit করবেন না।</b> <code>.gitignore</code> এগুলো আটকায়; <code>git status</code>-এ এগুলো দেখা গেলে থামুন।</li>
+    <li><b>Database password আর admin login password আলাদা রাখুন।</b></li>
+    <li><b>Demo account</b> (<code>admin@demo.example</code> ইত্যাদি) random password পেয়েছে যা কেউ জানে না; SEEDING.md-এর demo password live site-এ কাজ করে না। কখনো <code>DEMO_*_PASSWORD</code> ছাড়া demo seed live database-এ চালাবেন না।</li>
+    <li><b><code>EMAIL_ENCRYPTION_KEY</code> ও <code>BETTER_AUTH_SECRET</code> নিরাপদ জায়গায় backup রাখুন।</b> হারালে নতুন বানানো যায়, কিন্তু তাতে সবাই logout হবে আর সেভ করা email password আবার দিতে হবে।</li>
+    <li>GitHub repo <b>private</b> রাখুন।</li>
+  </ul>
+</section>
+
+<section class="chapter">
+  <h2><span class="num">১১</span>বাকি কাজ</h2>
+  <table>
+    <tr><th style="width:36%">কাজ</th><th>বিস্তারিত</th></tr>
+    <tr><td>Demo data বসানো</td><td>Script চালু করা হয়েছিল, database password দেওয়ার অপেক্ষায় ছিল। চালু না হলে PowerShell-এ <code>$env:DATABASE_URL</code> (port 6543) আর চারটা <code>DEMO_*_PASSWORD</code> (random) বসিয়ে <code>pnpm db:seed:lab</code>, <code>pnpm db:seed:website</code>, <code>pnpm db:seed:demo</code>।</td></tr>
+    <tr><td>Demo data মুছে ফেলা</td><td>আসল রোগীর কাজ শুরুর আগে। সব demo data <code>demo-</code> দিয়ে চিহ্নিত (SEEDING.md → Resetting)।</td></tr>
+    <tr><td>Test-এর দাম ও normal range</td><td>Starter test-এর দাম 0; normal range সাধারণ textbook মান। Pathologist দিয়ে <b>Tests &amp; services</b>-এ ঠিক করান।</td></tr>
+    <tr><td>Vercel plan</td><td>Hobby (free) plan শুধু ব্যক্তিগত/অবাণিজ্যিক কাজের জন্য। ক্লিনিক নিয়মিত চালাতে <b>Pro</b> plan বিবেচনা করুন।</td></tr>
+    <tr><td>নিজের domain (ঐচ্ছিক)</td><td>Vercel → Settings → Domains-এ যোগ করুন, তারপর <code>BETTER_AUTH_URL</code> নতুন ঠিকানায় বদলে Redeploy।</td></tr>
+    <tr><td>Database backup</td><td>Supabase free plan-এ স্বয়ংক্রিয় backup সীমিত। আসল data জমা শুরু হলে নিয়মিত export বা Pro plan বিবেচনা করুন।</td></tr>
+  </table>
+</section>
+
+<section class="chapter">
+  <h2><span class="num">১২</span>শূন্য থেকে নতুন করে deploy (checklist)</h2>
+  <p class="lead">নতুন account বা নতুন database-এ পুরো system আবার চালু করতে এই ক্রমে যান।</p>
+  <ul class="check">
+    <li>Supabase-এ নতুন project (region Mumbai), database password শুধু অক্ষর+সংখ্যা।</li>
+    <li>Supabase → <b>Connect</b> থেকে transaction pooler (6543) ও session pooler (5432) URI কপি।</li>
+    <li>Migration: <code>$env:DIRECT_URL</code> = 5432 URI, তারপর <code>pnpm prisma migrate deploy</code>।</li>
+    <li>দুটো নতুন random secret বানানো (<code>BETTER_AUTH_SECRET</code>, <code>EMAIL_ENCRYPTION_KEY</code>)।</li>
+    <li>GitHub-এ code push (private repo)।</li>
+    <li>vercel.com/new → repo Import → Environment Variables (অধ্যায় ৩-এর সব) → Deploy।</li>
+    <li>Deploy Ready হলে আসল ঠিকানা দেখে <code>BETTER_AUTH_URL</code> ঠিক করে Redeploy।</li>
+    <li>প্রথম admin: <code>pnpm db:seed</code> (অধ্যায় ৮)।</li>
+    <li>দরকার হলে <code>pnpm db:seed:lab</code> আর <code>pnpm db:seed:website</code>।</li>
+    <li>Login করে Dashboard, Bookings, Patients, Billing খুলে দেখা।</li>
+    <li>Supabase → Logs → Pooler-এ <code>EMAXCONN</code> আসছে না তা নিশ্চিত হওয়া।</li>
+  </ul>
+  <div class="box tip"><strong>মনে রাখার তিনটা কথা</strong>
+  ১) <code>DATABASE_URL</code> = <b>6543</b>, <code>DIRECT_URL</code> = <b>5432</b>। ২) Variable বদলালে <b>Redeploy</b>। ৩) নতুন migration আগে চালান, তারপর push।</div>
+</section>
+
+</body>
+</html>
