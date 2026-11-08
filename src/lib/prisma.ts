@@ -11,7 +11,12 @@ const globalForPrisma = globalThis as unknown as {
   prisma?: PrismaClient;
 };
 
-const adapter = new PrismaPg({ connectionString: databaseUrl });
+// On Vercel many function instances run at once; a small pool that closes idle connections keeps them
+// all inside the database pooler's client limit (Supabase free: 15 in session mode).
+const adapter = new PrismaPg({
+  connectionString: databaseUrl,
+  ...(process.env.VERCEL ? { max: 3, idleTimeoutMillis: 5_000 } : {}),
+});
 
 export const prisma =
   globalForPrisma.prisma ??

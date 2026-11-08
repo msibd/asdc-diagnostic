@@ -1,7 +1,7 @@
 # Graph Report - asdc_diagnostic  (2026-11-08)
 
 ## Corpus Check
-- 417 files · ~241,345 words
+- 417 files · ~241,387 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: .example 1, (none) 1, .toml 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f4f8fd87`
+- Built from commit: `37cd4c22`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -148,16 +148,16 @@
 10. `parseBody()` - 54 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `Request flow and layering` --references--> `parseQuery()`  [INFERRED]
+  ARCHITECTURE.md → src/lib/api.ts
+- `What was implemented` --references--> `DataTable()`  [INFERRED]
+  docs/DMS-IMPLEMENTATION-REPORT.md → src/components/shared/data-table.tsx
 - `7. Components` --references--> `Modal()`  [INFERRED]
   DESIGN_SYSTEM.md → src/components/shared/modal.tsx
 - `Components standardized` --references--> `Modal()`  [INFERRED]
   docs/UI-UX-FIX-REPORT.md → src/components/shared/modal.tsx
 - `Problems identified (all from the shared layer)` --references--> `Modal()`  [INFERRED]
   docs/UI-UX-FIX-REPORT.md → src/components/shared/modal.tsx
-- `Request flow and layering` --references--> `parseQuery()`  [INFERRED]
-  ARCHITECTURE.md → src/lib/api.ts
-- `What was implemented` --references--> `DataTable()`  [INFERRED]
-  docs/DMS-IMPLEMENTATION-REPORT.md → src/components/shared/data-table.tsx
 
 ## Import Cycles
 - None detected.
@@ -591,16 +591,16 @@ Nodes (3): autoMap(), choose(), normalize()
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `@prisma/client` connect `client.ts` to `prismaNamespace.ts`, `User.ts`, `commonInputTypes.ts`, `Account.ts`, `prismaNamespaceBrowser.ts`, `Session.ts`, `Appointment.ts`, `Verification.ts`, `package.json`?**
-  _High betweenness centrality (0.322) - this node is a cross-community bridge._
+  _High betweenness centrality (0.347) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `authorize()` (e.g. with `10. Staff and access control` and `Verification`) actually correct?**
   _`authorize()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **Should `prismaNamespace.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.017094017094017096 - nodes in this community are weakly interconnected._
 - **Why does `next` connect `next` to `email-config-service.ts`, `clinic-date.ts`, `patient-schema.ts`, `orders-section.tsx`, `DashboardSectionPage`, `authorize`, `order-service.ts`, `doctors/[id]/route.ts`, `sms-service.ts`, `clinic-website.tsx`, `package.json`, `report-rules.ts`, `auth.test.ts`, `auth.test.ts`, `result-service.ts`, `prisma.ts`, `recovery-service.ts`, `admin-dashboard.tsx`, `clinic-website.tsx`, `dependencies`, `lucide-react`, `report-service.ts`, `website-content/route.ts`, `doctor-queries.ts`, `prisma.ts`, `app/layout.tsx`, `website-content-management.tsx`, `appointment-service.ts`, `services/[id]/route.ts`, `usePublicLanguage`, `dashboard-overview.tsx`, `Design system and platform checklist`, `brand.ts`, `reviews.test.ts`, `logger.ts`, `appointment-insights.tsx`, `import-service.ts`, `gallery-management.tsx`, `password-recovery.test.ts`, `forgot-password-form.tsx`, `auth.ts`, `price-list/page.tsx`, `public_website/api/appointments/route.ts`?**
-  _High betweenness centrality (0.174) - this node is a cross-community bridge._
+  _High betweenness centrality (0.225) - this node is a cross-community bridge._
 - **Should `email-config-service.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.11649659863945579 - nodes in this community are weakly interconnected._
-- **Why does `react` connect `react` to `orders-section.tsx`, `purchases-tab.tsx`, `requestJson`, `Modal`, `next`, `expenses-section.tsx`, `doctors-section.tsx`, `clinic-website.tsx`, `package.json`, `report-rules.ts`, `users-tab.tsx`, `admin-dashboard.tsx`, `clinic-website.tsx`, `dependencies`, `lucide-react`, `doctor-queries.ts`, `app/layout.tsx`, `website-content-management.tsx`, `usePublicLanguage`, `dashboard-overview.tsx`, `access-schema.ts`, `appointment-insights.tsx`, `import-service.ts`, `appointment-management.tsx`, `gallery-management.tsx`, `Modal`, `sms-settings.tsx`, `forgot-password-form.tsx`, `review-management.tsx`, `booking-form.tsx`, `security-view.tsx`, `validatePhone`?**
-  _High betweenness centrality (0.101) - this node is a cross-community bridge._
+- **Why does `lucide-react` connect `lucide-react` to `orders-section.tsx`, `purchases-tab.tsx`, `requestJson`, `Modal`, `react`, `website-layout.ts`, `next`, `expenses-section.tsx`, `doctors-section.tsx`, `clinic-website.tsx`, `package.json`, `report-rules.ts`, `users-tab.tsx`, `admin-dashboard.tsx`, `clinic-website.tsx`, `dependencies`, `doctor-queries.ts`, `app/layout.tsx`, `website-content-management.tsx`, `usePublicLanguage`, `dashboard-overview.tsx`, `access-schema.ts`, `appointment-insights.tsx`, `import-service.ts`, `appointment-management.tsx`, `website-layout.ts`, `gallery-management.tsx`, `Modal`, `sms-settings.tsx`, `forgot-password-form.tsx`, `review-management.tsx`, `booking-form.tsx`, `price-list/page.tsx`, `security-view.tsx`, `validatePhone`?**
+  _High betweenness centrality (0.089) - this node is a cross-community bridge._
 - **Should `clinic-date.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.06682692307692308 - nodes in this community are weakly interconnected._
