@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<title>হস্তান্তর ও ব্যবহার নির্দেশিকা — Dr Ovi's Dental Care</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;600;700&display=block" rel="stylesheet">
+<style>
+  @page {
+    size: A4;
+    margin: 18mm 16mm 20mm;
+    @bottom-center { content: "পৃষ্ঠা " counter(page) " / " counter(pages); font-family: "Hind Siliguri", "Nirmala UI", sans-serif; font-size: 9pt; color: #6b7a8c; }
+    @top-right { content: "Dr Ovi's Dental Care · হস্তান্তর নির্দেশিকা"; font-family: "Hind Siliguri", "Nirmala UI", sans-serif; font-size: 8.5pt; color: #8a97a8; }
+  }
+  @page :first { margin: 0; @bottom-center { content: none; } @top-right { content: none; } }
+
+  :root {
+    --teal: #0f766e; --teal-2: #14b8a6; --teal-soft: #e6f6f3; --navy: #0d1b2e; --ink: #1f2c40; --ink-2: #4a5668;
+    --line: #dce5e2; --amber: #fff6e5; --amber-line: #f3dfb0; --amber-ink: #7a4f00; --red: #fdeceb; --red-line: #f2b8b3; --red-ink: #8a2a24;
+    --blue: #e8f0fd; --blue-line: #b9cff3; --blue-ink: #1e4f9a;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; font-family: "Hind Siliguri", "Nirmala UI", "Inter", sans-serif; color: var(--ink); font-size: 10.8pt; line-height: 1.72; }
+  .en, code, .mono { font-family: "Inter", "Segoe UI", sans-serif; }
+  code { background: #eef3f2; border-radius: 4px; padding: 0 4px; font-size: 9.2pt; }
+  h1, h2, h3 { line-height: 1.3; color: var(--navy); }
+  h2 { font-size: 19pt; margin: 0 0 4mm; padding-bottom: 2.5mm; border-bottom: 3px solid var(--teal); break-after: avoid; }
+  h2 .num { display: inline-grid; place-items: center; width: 10mm; height: 10mm; margin-right: 3mm; border-radius: 50%; background: linear-gradient(135deg, var(--teal-2), var(--teal)); color: #fff; font-size: 12pt; vertical-align: middle; }
+  h3 { font-size: 13pt; margin: 6mm 0 2mm; color: var(--teal); break-after: avoid; }
+  h4 { font-size: 11pt; margin: 4mm 0 1.5mm; break-after: avoid; }
+  p { margin: 0 0 2.5mm; }
+  ul, ol { margin: 0 0 3mm; padding-left: 6mm; }
+  li { margin-bottom: 1mm; }
+  section.chapter { break-before: page; }
+  .lead { font-size: 11.5pt; color: var(--ink-2); }
+
+  /* cover */
+  .cover { height: 297mm; padding: 26mm 20mm; display: flex; flex-direction: column; justify-content: space-between;
+    background: radial-gradient(ellipse at 90% 10%, rgba(20,184,166,.35), transparent 55%), linear-gradient(160deg, #0d1b2e 0%, #0f3b44 55%, #0f766e 100%); color: #fff; }
+  .cover .brand { display: flex; align-items: center; gap: 5mm; font-size: 15pt; font-weight: 600; }
+  .cover .logo { width: 16mm; height: 16mm; border-radius: 4mm; background: linear-gradient(135deg, #2dd4bf, #0d9488); display: grid; place-items: center; font-size: 22pt; }
+  .cover h1 { color: #fff; font-size: 34pt; margin: 0 0 5mm; line-height: 1.25; }
+  .cover .sub { font-size: 14pt; color: #c9f2ea; max-width: 150mm; }
+  .cover .meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; font-size: 10pt; }
+  .cover .meta div { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); border-radius: 3mm; padding: 3.5mm 4mm; }
+  .cover .meta b { display: block; color: #7ee8d7; font-size: 9pt; font-weight: 600; }
+
+  /* boxes */
+  .box { border-radius: 3mm; padding: 3.5mm 4.5mm; margin: 3mm 0 4mm; border: 1px solid; break-inside: avoid; }
+  .box > strong:first-child { display: block; margin-bottom: 1mm; }
+  .tip { background: var(--teal-soft); border-color: #b3e3d9; color: #0f4f45; }
+  .warn { background: var(--amber); border-color: var(--amber-line); color: var(--amber-ink); }
+  .danger { background: var(--red); border-color: var(--red-line); color: var(--red-ink); }
+  .info { background: var(--blue); border-color: var(--blue-line); color: var(--blue-ink); }
+
+  table { width: 100%; border-collapse: collapse; margin: 2mm 0 4mm; font-size: 9.8pt; break-inside: auto; }
+  th, td { border: 1px solid var(--line); padding: 2mm 2.5mm; vertical-align: top; text-align: left; }
+  th { background: linear-gradient(135deg, #e6f6f3, #e8f0fd); color: var(--navy); font-weight: 600; }
+  tr { break-inside: avoid; }
+  td .en { font-weight: 600; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+  .card { border: 1px solid var(--line); border-radius: 3mm; padding: 3.5mm 4mm; break-inside: avoid; background: #fff; }
+  .card h4 { margin-top: 0; color: var(--teal); }
+  .toc { columns: 2; column-gap: 10mm; font-size: 11pt; }
+  .toc li { break-inside: avoid; }
+  .steps { counter-reset: s; list-style: none; padding-left: 0; }
+  .steps > li { counter-increment: s; position: relative; padding-left: 10mm; margin-bottom: 2.5mm; break-inside: avoid; }
+  .steps > li::before { content: counter(s); position: absolute; left: 0; top: .5mm; width: 7mm; height: 7mm; border-radius: 50%; background: var(--teal); color: #fff; display: grid; place-items: center; font-size: 9pt; font-weight: 700; }
+  .path { display: inline-block; background: #0d1b2e; color: #e2fbf6; border-radius: 3px; padding: 0 5px; font-family: "Inter", sans-serif; font-size: 9pt; }
+
+  .diagram { display: grid; grid-template-columns: 1fr 22mm 1fr; align-items: center; gap: 2mm; margin: 4mm 0; break-inside: avoid; }
+  .diagram .side { border-radius: 4mm; padding: 4mm; color: #fff; }
+  .diagram .site { background: linear-gradient(135deg, #14b8a6, #0f766e); }
+  .diagram .dash { background: linear-gradient(135deg, #1e3a5f, #0d1b2e); }
+  .diagram .side ul { margin: 2mm 0 0; padding-left: 5mm; font-size: 9.5pt; }
+  .diagram .mid { text-align: center; font-size: 9pt; color: var(--ink-2); }
+  .diagram .db { background: #fff; border: 2px dashed var(--teal); border-radius: 3mm; padding: 2mm; color: var(--teal); font-weight: 700; }
+
+  .sign { display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; margin-top: 10mm; }
+  .sign div { border-top: 1.5px solid var(--ink); padding-top: 2mm; font-size: 10pt; }
+  .check li { list-style: none; position: relative; padding-left: 7mm; }
+  .check li::before { content: ""; position: absolute; left: 0; top: 1.6mm; width: 3.6mm; height: 3.6mm; border: 1.5px solid var(--teal); border-radius: 1mm; }
+  .small { font-size: 9.3pt; color: var(--ink-2); }
+</style>
+</head>
+<body>
+<!-- OUTDATED-NOTICE -->
+<div style="background:#fff4e5;border:2px solid #c2410c;color:#7c2d12;padding:12px 18px;font:600 13px/1.6 sans-serif;text-align:center">
+  ⚠ সতর্কতা: এই নির্দেশিকাটি আগের <b>ডেন্টাল ক্লিনিক</b> সংস্করণের জন্য লেখা এবং এখন পুরোনো। ডেন্টাল চার্ট, ট্রিটমেন্ট ও প্রেসক্রিপশনের অধ্যায়গুলো আর প্রযোজ্য নয়; পরীক্ষা অর্ডার, নমুনা, ফলাফল ও রিপোর্টের অংশ এতে নেই।
+  বর্তমান ডায়াগনস্টিক সিস্টেমের জন্য <b>README.md</b> ও <b>SEEDING.md</b> দেখুন।<br>
+  <span style="font-weight:400">Notice: this guide describes the previous dental-clinic version and is out of date. See README.md and SEEDING.md for the diagnostic system.</span>
+</div>
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+  <div class="brand"><div class="logo">🦷</div><div>Dr Ovi's Dental Care<br><span style="font-size:11pt;color:#b6ece2;font-weight:400">&amp; Endodontics</span></div></div>
+  <div>
+    <h1>ক্লিনিক ম্যানেজমেন্ট সিস্টেম<br>হস্তান্তর ও ব্যবহার নির্দেশিকা</h1>
+    <p class="sub">রোগী, অ্যাপয়েন্টমেন্ট, চিকিৎসা, বিলিং, ইনভেন্টরি, হিসাব এবং ক্লিনিকের ওয়েবসাইট — সবকিছু এক জায়গায়। এই নির্দেশিকায় সহজ ভাষায় বোঝানো হয়েছে সিস্টেমটি কী করে, কীভাবে ব্যবহার করবেন এবং হস্তান্তরের পর কী কী করতে হবে।</p>
+  </div>
+  <div class="meta">
+    <div><b>প্রস্তুতকাল</b>নভেম্বর ২০২৬</div>
+    <div><b>সংস্করণ</b>১.০ (প্রথম হস্তান্তর)</div>
+    <div><b>যাদের জন্য</b>ক্লিনিক মালিক, ডাক্তার ও স্টাফ</div>
+  </div>
+</div>
+
+<!-- ============ CONTENTS ============ -->
+<section class="chapter">
+  <h2>সূচিপত্র</h2>
+  <ol class="toc">
+    <li>এক নজরে সিস্টেম</li>
+    <li>হস্তান্তরের পর প্রথম দিনের কাজ</li>
+    <li>ব্যবহারকারী ও তাদের অনুমতি</li>
+    <li>লগইন, পাসওয়ার্ড ও নিরাপত্তা</li>
+    <li>ড্যাশবোর্ড পরিচিতি</li>
+    <li>অ্যাপয়েন্টমেন্ট</li>
+    <li>রোগী (Patients)</li>
+    <li>চিকিৎসা: ডেন্টাল চার্ট, ট্রিটমেন্ট, প্রেসক্রিপশন</li>
+    <li>বিলিং ও পেমেন্ট</li>
+    <li>ইনভেন্টরি (ওষুধ ও সরঞ্জাম)</li>
+    <li>ফাইন্যান্স: খরচ, দৈনিক হিসাব ও ক্যাশ ক্লোজিং</li>
+    <li>রিপোর্ট</li>
+    <li>ক্লিনিকের ওয়েবসাইট</li>
+    <li>ই-মেইল ও SMS সেটিংস</li>
+    <li>দৈনিক, সাপ্তাহিক ও মাসিক রুটিন</li>
+    <li>সাধারণ সমস্যা ও সমাধান</li>
+    <li>কারিগরি পরিশিষ্ট (আইটি সহায়তাকারীর জন্য)</li>
+    <li>হস্তান্তর স্বীকৃতি</li>
+  </ol>
+  <div class="box info" style="margin-top:8mm"><strong>এই নির্দেশিকা কীভাবে পড়বেন</strong>
+    অধ্যায় ১–৪ সবাই একবার পড়ুন। এরপর যিনি যে কাজ করেন (রিসেপশন, ডাক্তার, হিসাব) তিনি সেই অধ্যায়টি দেখুন। অধ্যায় ১৭ শুধু সার্ভার বা কারিগরি দায়িত্বে থাকা ব্যক্তির জন্য। সিস্টেমের মেনুগুলো ইংরেজিতে, তাই এখানে মেনুর নাম <span class="path">এভাবে</span> দেখানো হয়েছে।
+  </div>
+</section>
+
+<!-- ============ 1 ============ -->
+<section class="chapter">
+  <h2><span class="num">১</span>এক নজরে সিস্টেম</h2>
+  <p class="lead">সিস্টেমটির দুটি অংশ, কিন্তু তথ্য একটাই জায়গায় থাকে। রোগী ওয়েবসাইট থেকে অ্যাপয়েন্টমেন্টের অনুরোধ পাঠালে সেটি সঙ্গে সঙ্গে ক্লিনিকের ড্যাশবোর্ডে দেখা যায়।</p>
+  <div class="diagram">
+    <div class="side site"><strong>১. পাবলিক ওয়েবসাইট</strong><br><span class="small" style="color:#d9faf4">রোগীরা যা দেখেন</span>
+      <ul><li>ক্লিনিক, ডাক্তার ও সেবার পরিচিতি</li><li>অনলাইনে অ্যাপয়েন্টমেন্টের অনুরোধ</li><li>গ্যালারি, রিভিউ, ঠিকানা ও ম্যাপ</li><li>বাংলা ও ইংরেজি</li></ul></div>
+    <div class="mid"><div class="db">এক ডেটাবেস</div>সব তথ্য নিরাপদে এক জায়গায়</div>
+    <div class="side dash"><strong>২. স্টাফ ড্যাশবোর্ড</strong><br><span class="small" style="color:#c9d6e8">ক্লিনিক যা ব্যবহার করে</span>
+      <ul><li>অ্যাপয়েন্টমেন্ট ও রোগীর রেকর্ড</li><li>চিকিৎসা, প্রেসক্রিপশন, বিলিং</li><li>ইনভেন্টরি, খরচ, ক্যাশ ক্লোজিং, রিপোর্ট</li><li>ওয়েবসাইট, স্টাফ, ই-মেইল ও SMS নিয়ন্ত্রণ</li></ul></div>
+  </div>
+
+  <h3>যা যা করা যায় (মডিউল তালিকা)</h3>
+  <table>
+    <tr><th style="width:30%">মডিউল</th><th>কী কাজে লাগে</th></tr>
+    <tr><td><span class="en">Appointments</span></td><td>বুকিং, ক্যালেন্ডার, ওয়াক-ইন, নো-শো, রিমাইন্ডার, একই সময়ে দুবার বুকিং ঠেকানো</td></tr>
+    <tr><td><span class="en">Patients</span></td><td>রোগী রেজিস্ট্রেশন (স্বয়ংক্রিয় আইডি <code>PID-00001</code>), প্রোফাইল, ইতিহাস, ডুপ্লিকেট রোগী শনাক্ত</td></tr>
+    <tr><td><span class="en">Dental chart · Treatments · Prescriptions</span></td><td>দাঁতভিত্তিক চার্ট (FDI নম্বর), ভিজিট রেকর্ড, চিকিৎসা পরিকল্পনা, প্রিন্টযোগ্য প্রেসক্রিপশন</td></tr>
+    <tr><td><span class="en">Billing</span></td><td>ইনভয়েস, আংশিক পেমেন্ট, ডিসকাউন্ট, বকেয়া, রিফান্ড, প্রিন্টযোগ্য রসিদ</td></tr>
+    <tr><td><span class="en">Inventory</span></td><td>ওষুধ ও সরঞ্জামের স্টক, ক্রয়, সাপ্লায়ার, কম স্টক ও মেয়াদোত্তীর্ণের সতর্কতা</td></tr>
+    <tr><td><span class="en">Finance</span></td><td>খরচ লেখা, দৈনিক আয়-ব্যয়, দিনের শেষে ক্যাশ গোনা (ক্যাশ ক্লোজিং)</td></tr>
+    <tr><td><span class="en">Reports</span></td><td>আয়, বকেয়া, খরচ, লাভ/ক্ষতি, নো-শো, পেমেন্টের মাধ্যমভিত্তিক হিসাব</td></tr>
+    <tr><td><span class="en">Website content · Reviews</span></td><td>ওয়েবসাইটের লেখা, ছবি, গ্যালারি, গুগল ম্যাপ ও রোগীদের রিভিউ নিয়ন্ত্রণ</td></tr>
+    <tr><td><span class="en">Users &amp; roles · Email · SMS · Security</span></td><td>স্টাফ অ্যাকাউন্ট ও অনুমতি, পাসওয়ার্ড উদ্ধারের ই-মেইল, অ্যাপয়েন্টমেন্টের SMS, অডিট লগ</td></tr>
+  </table>
+  <div class="box tip"><strong>মনে রাখার মতো</strong>
+    আর্থিক ও চিকিৎসা-সংক্রান্ত রেকর্ড কখনো মুছে ফেলা যায় না। ভুল হলে "Void" (বাতিল) বা "Refund" করতে হয়, কারণ উল্লেখসহ। এতে হিসাব সবসময় স্বচ্ছ থাকে এবং পরে যাচাই করা যায়।
+  </div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section class="chapter">
+  <h2><span class="num">২</span>হস্তান্তরের পর প্রথম দিনের কাজ</h2>
+  <p class="lead">নিচের কাজগুলো একবার করলেই সিস্টেম পুরোপুরি চালু হয়ে যাবে। আনুমানিক সময়: ১–২ ঘণ্টা।</p>
+  <ol class="steps">
+    <li><strong>অ্যাডমিন হিসেবে লগইন করুন</strong> — ঠিকানা: <span class="path">আপনার-ডোমেইন/login</span>। হস্তান্তরের সময় দেওয়া অ্যাডমিন ই-মেইল ও পাসওয়ার্ড দিন।</li>
+    <li><strong>পাসওয়ার্ড বদলান</strong> — <span class="path">Security</span> থেকে নিজের নতুন পাসওয়ার্ড দিন (কমপক্ষে ১০ অক্ষর)। হস্তান্তরের পাসওয়ার্ড আর ব্যবহার করবেন না।</li>
+    <li><strong>ডাক্তারের প্রোফাইল ও সময়সূচি</strong> — <span class="path">Doctors</span> থেকে নাম, ডিগ্রি, ফোন, ঠিকানা, ভিজিট ফি এবং সপ্তাহের কোন দিন কখন বসবেন তা দিন। ওয়েবসাইটের বুকিং এই সময়সূচি অনুযায়ীই সময় দেখায়।</li>
+    <li><strong>সেবা ও দাম</strong> — <span class="path">Services</span> থেকে প্রতিটি চিকিৎসার নাম, দাম ও সময়কাল (মিনিট) ঠিক করুন।</li>
+    <li><strong>স্টাফ অ্যাকাউন্ট</strong> — <span class="path">Users &amp; roles</span> থেকে প্রত্যেক কর্মীর জন্য আলাদা অ্যাকাউন্ট খুলুন (অধ্যায় ৩)। কখনো একটি অ্যাকাউন্ট কয়েকজন মিলে ব্যবহার করবেন না।</li>
+    <li><strong>ওয়েবসাইটের লেখা ও ছবি</strong> — <span class="path">Website content</span> থেকে ক্লিনিকের নাম, হেডলাইন, ছবি, গ্যালারি এবং গুগল ম্যাপের লিংক দিন।</li>
+    <li><strong>SMS চালু করুন</strong> — <span class="path">SMS Settings</span> (অধ্যায় ১৪)। <b>গুরুত্বপূর্ণ:</b> ডেভেলপমেন্টের সময় BulkSMSBD-এর API key একটি স্ক্রিনশটে শেয়ার হয়েছিল। BulkSMSBD প্যানেল থেকে নতুন key তৈরি করে শুধু সেটিই এখানে দিন।</li>
+    <li><strong>ই-মেইল চালু করুন</strong> — <span class="path">Email &amp; SMTP Settings</span> (অধ্যায় ১৪)। এতে স্টাফরা পাসওয়ার্ড ভুলে গেলে নিজেরাই উদ্ধার করতে পারবেন।</li>
+    <li><strong>পরীক্ষামূলক বুকিং</strong> — নিজের মোবাইল নম্বর দিয়ে ওয়েবসাইট থেকে একটি অ্যাপয়েন্টমেন্ট বুক করুন। ড্যাশবোর্ডে দেখা যাচ্ছে কিনা এবং SMS এসেছে কিনা দেখুন। তারপর সেটি বাতিল করে দিন।</li>
+    <li><strong>ব্যাকআপ নিশ্চিত করুন</strong> — আইটি সহায়তাকারীর কাছ থেকে জেনে নিন প্রতিদিন ডেটাবেসের ব্যাকআপ হচ্ছে কিনা (অধ্যায় ১৭)।</li>
+  </ol>
+  <div class="box danger"><strong>অবশ্যই করবেন</strong>
+    হস্তান্তরের পর অ্যাডমিন পাসওয়ার্ড ও SMS API key দুটোই বদলাবেন। ডেভেলপমেন্টের সময় যেসব পাসওয়ার্ড বা key অন্য কারো সাথে শেয়ার হয়েছে, সেগুলোকে আর গোপন ধরা যায় না।
+  </div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section class="chapter">
+  <h2><span class="num">৩</span>ব্যবহারকারী ও তাদের অনুমতি</h2>
+  <p class="lead">প্রত্যেক কর্মী নিজের অ্যাকাউন্টে লগইন করেন। কে কী দেখতে বা করতে পারবেন তা তার "রোল" (role) ঠিক করে। কোনো মেনু দেখা না গেলে বুঝবেন সেই কাজের অনুমতি তার নেই।</p>
+  <table>
+    <tr><th style="width:22%">রোল</th><th>কী করতে পারেন</th><th style="width:28%">যা পারেন না</th></tr>
+    <tr><td><span class="en">Administrator</span></td><td>সবকিছু: স্টাফ ও রোল, ই-মেইল ও SMS সেটিংস, রিফান্ড, ক্যাশ ক্লোজিং, রিপোর্ট</td><td>— (সীমিত করা যায় না)</td></tr>
+    <tr><td><span class="en">Receptionist</span></td><td>রোগী রেজিস্ট্রেশন, অ্যাপয়েন্টমেন্ট, ইনভয়েস তৈরি ও পেমেন্ট নেওয়া, স্টক দেখা</td><td>ইনভয়েস বাতিল, রিফান্ড, খরচ, রিপোর্ট</td></tr>
+    <tr><td><span class="en">Doctor</span></td><td>রোগীর রেকর্ড, ডেন্টাল চার্ট, ভিজিট, প্রেসক্রিপশন, চিকিৎসা পরিকল্পনা</td><td>রিফান্ড, খরচ, ক্যাশ</td></tr>
+    <tr><td><span class="en">Dental assistant</span></td><td>রোগী ও অ্যাপয়েন্টমেন্ট দেখা, চিকিৎসা দেখা, স্টক ব্যবহার লেখা</td><td>রোগী সম্পাদনা, বিলিং</td></tr>
+    <tr><td><span class="en">Accountant</span></td><td>বিলিং ও রিফান্ড, খরচ, ক্যাশ ক্লোজিং, ইনভেন্টরি ক্রয়, রিপোর্ট</td><td>চিকিৎসা রেকর্ড সম্পাদনা</td></tr>
+  </table>
+
+  <h3>নতুন কর্মী যোগ করা</h3>
+  <ol class="steps">
+    <li><span class="path">Users &amp; roles → Staff accounts → Add staff</span></li>
+    <li>নাম, ই-মেইল (এটিই লগইন), মোবাইল নম্বর ও রোল দিন। "Generate" চাপলে একটি নিরাপদ পাসওয়ার্ড তৈরি হবে।</li>
+    <li>সেভ করার পর স্ক্রিনে লগইনের তথ্য একবারই দেখাবে। কর্মীকে ব্যক্তিগতভাবে দিন। তিনি প্রথম লগইনের পর <span class="path">Security</span> থেকে নিজের পাসওয়ার্ড বদলে নেবেন।</li>
+  </ol>
+
+  <h3>কর্মী চলে গেলে বা পাসওয়ার্ড ভুলে গেলে</h3>
+  <ul>
+    <li><b>চলে গেলে:</b> অ্যাকাউন্ট মুছবেন না, <b>Deactivate</b> করুন। তিনি সাথে সাথে সব ডিভাইস থেকে বের হয়ে যাবেন, আর লগইন করতে পারবেন না। তার করা কাজের ইতিহাস রয়ে যাবে।</li>
+    <li><b>পাসওয়ার্ড ভুলে গেলে:</b> লগইন পেজের "Forgot password?" দিয়ে নিজের ই-মেইলে ৬ অঙ্কের কোড নিয়ে নিজেই বদলাতে পারবেন (ই-মেইল চালু থাকলে)। অথবা অ্যাডমিন <b>Reset password</b> দিয়ে নতুন পাসওয়ার্ড দিতে পারেন।</li>
+  </ul>
+
+  <h3>রোল নিজের মতো সাজানো</h3>
+  <p><span class="path">Users &amp; roles → Roles &amp; permissions</span> থেকে প্রতিটি রোলের অনুমতি টিক দিয়ে বদলানো যায়, বা নতুন রোল (যেমন "Lab technician") তৈরি করা যায়। পরিবর্তন সঙ্গে সঙ্গে কার্যকর হয়।</p>
+  <div class="box info"><strong>সুরক্ষার নিয়ম (সিস্টেম নিজেই মানে)</strong>
+    "স্টাফ ও রোল নিয়ন্ত্রণ", "ই-মেইল" ও "SMS" সেটিংসের অনুমতি শুধু Administrator রোলের থাকে, অন্য কাউকে দেওয়া যায় না। কেউ নিজের রোল বদলাতে বা নিজেকে বন্ধ করতে পারে না, আর শেষ সক্রিয় অ্যাডমিনকে বন্ধ করা যায় না।
+  </div>
+</section>
+
+<!-- ============ 4 ============ -->
+<section class="chapter">
+  <h2><span class="num">৪</span>লগইন, পাসওয়ার্ড ও নিরাপত্তা</h2>
+  <div class="grid2">
+    <div class="card"><h4>লগইনের উপায়</h4><ul><li>ই-মেইল ও পাসওয়ার্ড দিয়ে</li><li>কম্পিউটারে QR কোড দেখিয়ে, ইতিমধ্যে লগইন করা মোবাইল দিয়ে স্ক্যান করে অনুমোদন</li></ul></div>
+    <div class="card"><h4>পাসওয়ার্ডের নিয়ম</h4><ul><li>কমপক্ষে ১০ অক্ষর</li><li>প্রত্যেকের আলাদা, কারো সাথে শেয়ার নয়</li><li>পাসওয়ার্ড বদলালে বা রিসেট হলে পুরোনো সব লগইন বন্ধ হয়ে যায়</li></ul></div>
+  </div>
+  <h3>সিস্টেমে যেসব সুরক্ষা আছে</h3>
+  <ul>
+    <li>প্রতিটি কাজ সার্ভারে অনুমতি যাচাই করে। শুধু বাটন লুকিয়ে রাখা নয়, অনুমতি না থাকলে সার্ভার কাজটি করতেই দেয় না।</li>
+    <li>পাসওয়ার্ড এনক্রিপ্ট করা থাকে; কেউ (ডেভেলপারও) আসল পাসওয়ার্ড দেখতে পারে না।</li>
+    <li>SMS key ও ই-মেইলের পাসওয়ার্ড শক্তিশালী এনক্রিপশনে (AES-256) সংরক্ষিত; স্ক্রিনে কখনো দেখায় না।</li>
+    <li>পাসওয়ার্ড উদ্ধারের কোড ৫ মিনিটে মেয়াদ শেষ হয়, ৫ বার ভুল দিলে বাতিল হয়।</li>
+    <li>লগইন, বুকিং ও পাসওয়ার্ড-উদ্ধারে অতিরিক্ত চেষ্টা আটকানো হয় (rate limit)।</li>
+    <li>গুরুত্বপূর্ণ সব পরিবর্তন <span class="path">Security</span>-এর অডিট লগে লেখা থাকে: কে, কখন, কী করেছেন।</li>
+  </ul>
+  <div class="box warn"><strong>স্টাফদের বলে দিন</strong>
+    কাজ শেষে, বিশেষ করে শেয়ার করা কম্পিউটারে, অবশ্যই "Sign out" করবেন। ক্লিনিকের কেউ কখনো ফোনে বা মেসেজে পাসওয়ার্ড বা OTP কোড চাইবে না।
+  </div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section class="chapter">
+  <h2><span class="num">৫</span>ড্যাশবোর্ড পরিচিতি</h2>
+  <p class="lead">লগইনের পর প্রথম পাতা <span class="path">Overview</span>। এখানে এক নজরে ক্লিনিকের অবস্থা দেখা যায়।</p>
+  <table>
+    <tr><th style="width:30%">অংশ</th><th>কী দেখায়</th></tr>
+    <tr><td>উপরের রঙিন কার্ড</td><td>মোট রোগী, অ্যাপয়েন্টমেন্ট, অপেক্ষমাণ অনুরোধ, আজ/সপ্তাহ/মাসের আয়, বকেয়া</td></tr>
+    <tr><td>Appointments চার্ট</td><td>সপ্তাহ/মাস/বছর অনুযায়ী ভিজিটের সংখ্যা</td></tr>
+    <tr><td>Next Patient Details</td><td>পরবর্তী রোগী কে, কখন</td></tr>
+    <tr><td>Approval Requests</td><td>ওয়েবসাইট থেকে আসা অনুরোধ; এখান থেকেই এক ক্লিকে নিশ্চিত করা যায়</td></tr>
+    <tr><td>Today's Appointment</td><td>আজকের তালিকা</td></tr>
+  </table>
+  <h3>বাম পাশের মেনু (Sidebar)</h3>
+  <p>কাজ অনুযায়ী ভাগ করা: <b>Workspace</b> (Overview, Appointments, Patients, Doctors), <b>Clinical</b> (Dental chart, Treatments, Prescriptions, Services), <b>Practice</b> (Billing, Inventory, Finance, Reports), <b>Website</b> (Website content, Reviews), <b>Administration</b> (Users &amp; roles, Email, SMS, Security)। মেনুর বোতাম দিয়ে ছোট করা যায়; মোবাইলে মেনু বাম দিক থেকে খোলে।</p>
+  <div class="grid2">
+    <div class="card"><h4>খোঁজা (Search)</h4>উপরের সার্চ বক্সে (বা <code>Ctrl + K</code>) রোগী বা অ্যাপয়েন্টমেন্ট নাম, ফোন বা আইডি দিয়ে খুঁজুন।</div>
+    <div class="card"><h4>লাইভ আপডেট</h4>অন্য কেউ কিছু বদলালে বা ওয়েবসাইট থেকে বুকিং এলে পাতা নিজে থেকে হালনাগাদ হয়, রিফ্রেশ করতে হয় না।</div>
+    <div class="card"><h4>নোটিফিকেশন</h4>কোনো কাজ সফল বা ব্যর্থ হলে নিচে ডান কোণে ছোট বার্তা ভেসে ওঠে।</div>
+    <div class="card"><h4>ডার্ক মোড</h4>প্রোফাইল মেনু থেকে আলো/অন্ধকার থিম বেছে নেওয়া যায়।</div>
+  </div>
+</section>
+
+<!-- ============ 6 ============ -->
+<section class="chapter">
+  <h2><span class="num">৬</span>অ্যাপয়েন্টমেন্ট</h2>
+  <h3>অ্যাপয়েন্টমেন্ট কোথা থেকে আসে</h3>
+  <table>
+    <tr><th style="width:25%">উৎস</th><th>কীভাবে</th></tr>
+    <tr><td>ওয়েবসাইট</td><td>রোগী নিজে সেবা, তারিখ ও খালি সময় বেছে অনুরোধ পাঠান। অবস্থা: <b>Pending</b></td></tr>
+    <tr><td>WhatsApp</td><td>ওয়েবসাইটের ফর্ম থেকেই WhatsApp-এ বার্তা পাঠানোর বিকল্প</td></tr>
+    <tr><td>ড্যাশবোর্ড</td><td>রিসেপশন ফোনে কথা বলে <span class="path">New appointment</span> দিয়ে</td></tr>
+    <tr><td>ওয়াক-ইন</td><td>রোগী সরাসরি এলে <span class="path">Walk-in</span>: এখনকার সময়ে, সরাসরি <b>Confirmed</b></td></tr>
+  </table>
+
+  <h3>অ্যাপয়েন্টমেন্টের অবস্থা (Status)</h3>
+  <p><b>Pending</b> (অনুরোধ) → <b>Confirmed</b> (নিশ্চিত) → <b>Completed</b> (চিকিৎসা হয়েছে)। মাঝপথে <b>Cancelled</b> (বাতিল) বা <b>No-show</b> (রোগী আসেননি) করা যায়। ভুল করে No-show দিলে আবার Confirmed করা যায়।</p>
+
+  <h3>দুবার বুকিং বা একই সময়ে দুজন — সিস্টেম নিজেই ঠেকায়</h3>
+  <ul>
+    <li>একই মোবাইল নম্বর থেকে একই দিনে একই সেবার জন্য দ্বিতীয়বার বুকিং করা যায় না।</li>
+    <li>ওয়েবসাইটে যে সময় অন্য কেউ আগে নিয়েছেন, সেটি তালিকায় "বুক করা" লেখা দেখায় এবং বেছে নেওয়া যায় না।</li>
+    <li>দুটি নিশ্চিত (Confirmed) অ্যাপয়েন্টমেন্টের সময় একটার ওপর আরেকটা পড়তে পারে না।</li>
+    <li>ডাক্তারের সময়সূচির বাইরে বা বন্ধের দিনে বুকিং হয় না।</li>
+  </ul>
+
+  <h3>দেখার ধরন ও রিমাইন্ডার</h3>
+  <ul>
+    <li>তালিকা (List), দিন (Day), সপ্তাহ (Week), মাস (Month) ক্যালেন্ডার। সেবা, মাধ্যম, তারিখ ও অবস্থা দিয়ে ফিল্টার করা যায়।</li>
+    <li><b>Reminders</b> প্যানেলে আসন্ন অ্যাপয়েন্টমেন্ট ও ফলো-আপের তালিকা থাকে, প্রত্যেকের পাশে এক ক্লিকে <b>Call</b> ও <b>WhatsApp</b> বাটন।</li>
+    <li>SMS চালু থাকলে বুকিং হওয়ার সাথে সাথে রোগীর নম্বরে নিশ্চিতকরণ SMS যায় (ওয়াক-ইন ছাড়া)।</li>
+  </ul>
+  <div class="box tip"><strong>পরামর্শ</strong>
+    প্রতিদিন সকালে <span class="path">Overview → Approval Requests</span> দেখে ওয়েবসাইটের অনুরোধগুলো নিশ্চিত বা বাতিল করুন। দিনের শেষে যারা আসেননি তাদের No-show করুন; রিপোর্টে নো-শোর হার দেখা যায়।
+  </div>
+</section>
+
+<!-- ============ 7 ============ -->
+<section class="chapter">
+  <h2><span class="num">৭</span>রোগী (Patients)</h2>
+  <ul>
+    <li><span class="path">Patients → Register patient</span>: নাম ও মোবাইল নম্বর বাধ্যতামূলক; জন্মতারিখ দিলে বয়স নিজে দেখায়। ঠিকানা, জরুরি যোগাযোগ, অ্যালার্জি, মেডিকেল ও ডেন্টাল ইতিহাস রাখা যায়।</li>
+    <li>প্রত্যেক রোগী একটি স্থায়ী আইডি পান, যেমন <code>PID-00012</code>।</li>
+    <li>একই নাম ও নম্বরে আগে থেকেই রোগী থাকলে সিস্টেম জানিয়ে দেয়, ফলে ডুপ্লিকেট হয় না।</li>
+    <li>নাম, ফোন, আইডি বা ই-মেইলের অংশ লিখেও খোঁজা যায়।</li>
+    <li>ফর্মে ভুল থাকলে (যেমন ভুল মোবাইল নম্বর) ঘরের পাশেই লাল বার্তা দেখায়।</li>
+  </ul>
+  <div class="box warn"><strong>রোগী মুছে ফেলা</strong>
+    যে রোগীর অ্যাপয়েন্টমেন্ট বা চিকিৎসার ইতিহাস আছে তাকে মোছা যায় না, শুধু নিষ্ক্রিয় (Inactive) করা যায়। এতে পুরোনো রেকর্ড অক্ষত থাকে।
+  </div>
+</section>
+
+<!-- ============ 8 ============ -->
+<section class="chapter">
+  <h2><span class="num">৮</span>চিকিৎসা: ডেন্টাল চার্ট, ট্রিটমেন্ট, প্রেসক্রিপশন</h2>
+  <div class="grid2">
+    <div class="card"><h4>Dental chart &amp; visits</h4>রোগী বেছে প্রতিটি দাঁতের অবস্থা (সুস্থ, ক্যারিজ, ফিলিং, ক্রাউন, রুট ক্যানাল, ইমপ্ল্যান্ট, ফাটা, অনুপস্থিত ইত্যাদি) FDI নম্বর অনুযায়ী লিখুন। প্রতিটি ভিজিটে অভিযোগ, পরীক্ষার ফলাফল, রোগনির্ণয় ও ফলো-আপের তারিখ রাখুন।</div>
+    <div class="card"><h4>Treatments</h4>চিকিৎসা পরিকল্পনা: কোন দাঁত, কী প্রক্রিয়া, আনুমানিক খরচ। অবস্থা: Planned → In progress → Completed। প্রতিটি সেশনের নোট আলাদাভাবে রাখা যায়।</div>
+    <div class="card"><h4>Prescriptions</h4>রোগী বাছলে তার অ্যালার্জি ও ইতিহাস পাশে দেখায়। ওষুধ, ডোজ, কতবার, কতদিন লিখে সেভ বা প্রিন্ট করুন। ফলো-আপের তারিখ দিলে সেটি রিমাইন্ডারে আসে।</div>
+    <div class="card"><h4>Services</h4>সেবার নাম (বাংলা-ইংরেজি), দাম, সময়কাল ও ওয়েবসাইটে দেখানোর বিবরণ। বন্ধ করা সেবা ওয়েবসাইটে দেখায় না।</div>
+  </div>
+  <div class="box tip"><strong>অ্যালার্জি সতর্কতা</strong>
+    প্রেসক্রিপশন লেখার আগে রোগীর প্রোফাইলে অ্যালার্জির ঘর পূরণ করে রাখুন; প্রেসক্রিপশন পাতায় এটি সবার আগে দেখায়।
+  </div>
+</section>
+
+<!-- ============ 9 ============ -->
+<section class="chapter">
+  <h2><span class="num">৯</span>বিলিং ও পেমেন্ট</h2>
+  <ol class="steps">
+    <li><span class="path">Billing → Issue invoice</span>: রোগী বাছুন, সেবা বেছে নিলে নাম ও দাম নিজে বসে যায়। পরিমাণ, ডিসকাউন্ট ও ট্যাক্স দিন; মোট টাকা সাথে সাথে দেখায়।</li>
+    <li>ইনভয়েস নম্বর নিজে তৈরি হয় এবং কখনো দুবার হয় না।</li>
+    <li><b>Record payment</b>: পুরো বা আংশিক টাকা নিন। মাধ্যম: Cash, Card, Mobile banking, Bank transfer। বাকি টাকা "Due" হিসেবে দেখায়।</li>
+    <li><b>Print</b>: রোগীকে রসিদ প্রিন্ট করে দিন।</li>
+  </ol>
+  <table>
+    <tr><th style="width:28%">পরিস্থিতি</th><th>কী করবেন</th><th style="width:22%">কে পারেন</th></tr>
+    <tr><td>ভুল ইনভয়েস (পেমেন্ট হয়নি)</td><td><b>Void invoice</b>, কারণ লিখে</td><td>Admin*</td></tr>
+    <tr><td>টাকা ফেরত দিতে হবে</td><td>নির্দিষ্ট পেমেন্টে <b>Refund</b>, কারণ লিখে</td><td>Admin, Accountant</td></tr>
+    <tr><td>রোগী পরে বাকি টাকা দেবেন</td><td>আবার Record payment</td><td>Receptionist সহ সবাই</td></tr>
+  </table>
+  <p class="small">* ডিফল্টভাবে শুধু Administrator; চাইলে Roles &amp; permissions থেকে অন্য রোলকে "Void invoices" অনুমতি দেওয়া যায়। ডিসকাউন্ট কখনো মোট বিলের চেয়ে বেশি হতে পারে না; সিস্টেম নিজেই আটকায়।</p>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="chapter">
+  <h2><span class="num">১০</span>ইনভেন্টরি (ওষুধ ও সরঞ্জাম)</h2>
+  <p class="lead"><span class="path">Inventory</span>-এ চারটি ট্যাব: Stock, Purchases, Suppliers, Reports &amp; history। সংখ্যা হাতে বদলানো যায় না; স্টক শুধু ক্রয়, ব্যবহার ও সংশোধনের মাধ্যমে বদলায়, তাই হিসাব কখনো গরমিল হয় না।</p>
+  <table>
+    <tr><th style="width:24%">কাজ</th><th>কীভাবে</th></tr>
+    <tr><td>নতুন আইটেম</td><td><b>Add item</b>: নাম, ক্যাটাগরি, একক (pcs, box, ml), রিঅর্ডার লেভেল (এর নিচে নামলে সতর্কতা)</td></tr>
+    <tr><td>ক্রয়</td><td><b>Purchases → Record purchase</b>: সাপ্লায়ার, তারিখ, প্রতিটি আইটেমের পরিমাণ, দাম, ব্যাচ ও মেয়াদ। "Paid now" টিক দিলে খরচের খাতায় নিজে যোগ হয়।</td></tr>
+    <tr><td>ব্যবহার</td><td>আইটেমের পাশে <b>Use</b>, কী কাজে লেগেছে লিখে। আগে মেয়াদ শেষ হবে এমন ব্যাচ আগে খরচ হয়।</td></tr>
+    <tr><td>সংশোধন</td><td><b>Adjust</b>: গণনায় পার্থক্য, নষ্ট বা মেয়াদোত্তীর্ণ মাল বাদ দেওয়া, কারণসহ</td></tr>
+  </table>
+  <div class="grid2">
+    <div class="card"><h4>সতর্কতা</h4>কম স্টক, স্টক শেষ, ৩০ দিনের মধ্যে মেয়াদ শেষ, মেয়াদোত্তীর্ণ — উপরের কার্ড ও হলুদ সতর্কবার্তায় দেখায়। মেয়াদোত্তীর্ণ মাল "Use" করা যায় না।</div>
+    <div class="card"><h4>টেবিল</h4>কলামের শিরোনামে ক্লিক করে সাজানো (sort) যায়, সার্চ বক্সে নাম, কোড বা সাপ্লায়ার দিয়ে খোঁজা যায়।</div>
+  </div>
+</section>
+
+<!-- ============ 11 ============ -->
+<section class="chapter">
+  <h2><span class="num">১১</span>ফাইন্যান্স: খরচ, দৈনিক হিসাব ও ক্যাশ ক্লোজিং</h2>
+  <h3>খরচ (Expenses)</h3>
+  <p><span class="path">Finance → Expenses</span>: ভাড়া, বিল, সরঞ্জাম, বেতন, ল্যাব ফি ইত্যাদি ক্যাটাগরিতে খরচ লিখুন। ভুল হলে মুছবেন না, <b>Void</b> করুন কারণসহ।</p>
+  <h3>দৈনিক হিসাব ও ক্যাশ ক্লোজিং</h3>
+  <ol class="steps">
+    <li><span class="path">Finance → Daily summary &amp; cash closing</span> খুলুন।</li>
+    <li>দিনের আয় (মাধ্যম অনুযায়ী), রিফান্ড, খরচ এবং লাভ/ক্ষতি দেখুন।</li>
+    <li>"Cash drawer" অংশে সিস্টেম হিসাব করে দেখায় ড্রয়ারে কত টাকা থাকার কথা: আগের দিনের গোনা টাকা + আজকের ক্যাশ আয় − ক্যাশ রিফান্ড − ক্যাশ খরচ।</li>
+    <li>ড্রয়ারের টাকা গুনে "Counted cash"-এ লিখুন। মিল না হলে কারণ লিখতে হবে। <b>Close the day</b> চাপুন।</li>
+  </ol>
+  <div class="box warn"><strong>একবার বন্ধ হলে</strong>
+    একটি দিন একবারই ক্লোজ করা যায় এবং পরে বদলানো যায় না। পার্থক্য থাকলে কারণ স্পষ্ট লিখুন। পরের দিনের শুরুর টাকা হিসেবে আজকের গোনা টাকা ধরা হয়।
+  </div>
+</section>
+
+<!-- ============ 12 ============ -->
+<section class="chapter">
+  <h2><span class="num">১২</span>রিপোর্ট</h2>
+  <p><span class="path">Reports</span> থেকে যেকোনো সময়সীমা (সর্বোচ্চ ১ বছর) বেছে দেখুন:</p>
+  <ul>
+    <li>নতুন রোগী, মোট অ্যাপয়েন্টমেন্ট ও অবস্থা অনুযায়ী ভাগ</li>
+    <li>আদায় হওয়া আয়, বকেয়া, পেমেন্টের সংখ্যা ও মাধ্যম</li>
+    <li>ক্যাটাগরি অনুযায়ী খরচ এবং <b>লাভ/ক্ষতি</b> (আদায় − খরচ, নগদ হিসাব)</li>
+    <li>নো-শোর সংখ্যা ও হার, যারা বেশি আসেননি তাদের তালিকা</li>
+    <li>দৈনিক অ্যাপয়েন্টমেন্ট ও আয়</li>
+  </ul>
+  <p><b>Export CSV</b> চাপলে Excel-এ খোলার মতো ফাইল ডাউনলোড হয়। ইনভেন্টরির নিজস্ব রিপোর্ট <span class="path">Inventory → Reports &amp; history</span>-এ (সবচেয়ে বেশি ব্যবহৃত মাল, সাপ্লায়ার অনুযায়ী ক্রয়, ক্ষতি, স্টকের মূল্য)।</p>
+  <div class="box info"><strong>লাভ/ক্ষতি সম্পর্কে</strong>
+    এটি নগদ হিসাব: সময়সীমায় যা আদায় হয়েছে তা থেকে লেখা খরচ বাদ। পূর্ণাঙ্গ হিসাববিজ্ঞান (যেমন অবচয়) এতে ধরা হয় না; বার্ষিক হিসাবের জন্য হিসাবরক্ষকের পরামর্শ নিন।
+  </div>
+</section>
+
+<!-- ============ 13 ============ -->
+<section class="chapter">
+  <h2><span class="num">১৩</span>ক্লিনিকের ওয়েবসাইট</h2>
+  <p class="lead">ওয়েবসাইটের প্রায় সব লেখা, ছবি ও অংশ ড্যাশবোর্ড থেকে বদলানো যায়, কোনো প্রোগ্রামার ছাড়াই। পরিবর্তন সেভ করলে সাথে সাথে ওয়েবসাইটে দেখা যায়।</p>
+  <table>
+    <tr><th style="width:28%">Website content-এর ট্যাব</th><th>কী বদলানো যায়</th></tr>
+    <tr><td>Clinic &amp; menu</td><td>ক্লিনিকের নাম, উপরের মেনুর নাম, কোন মেনু দেখাবে</td></tr>
+    <tr><td>Home</td><td>হেডলাইন, পরিচিতি, প্রধান ছবি, ছোট হাইলাইট</td></tr>
+    <tr><td>About the dentist</td><td>ডাক্তারের যোগ্যতা, ছবি, পাশের কার্ড</td></tr>
+    <tr><td>Services · Why choose us · Reviews · Booking</td><td>প্রতিটি অংশের শিরোনাম ও বর্ণনা; কিছু অংশ লুকানোও যায়</td></tr>
+    <tr><td>Gallery</td><td>ছবি যোগ, ক্রম বদল, মুছে ফেলা (ছবির পাবলিক লিংক দিয়ে)</td></tr>
+    <tr><td>Contact &amp; footer</td><td><b>Google Maps লিংক</b>, ফুটারের লেখা, Facebook পেজ</td></tr>
+  </table>
+  <div class="grid2">
+    <div class="card"><h4>গুগল ম্যাপ যোগ করা</h4>Google Maps-এ ক্লিনিক খুলে <b>Share</b> চাপুন, লিংক কপি করে Contact &amp; footer-এর "Google Maps link" ঘরে দিয়ে সেভ করুন। ওয়েবসাইটে ম্যাপ ও "Open in Google Maps" বাটন দেখাবে।</div>
+    <div class="card"><h4>রিভিউ</h4>রোগীরা ওয়েবসাইটে রিভিউ দিলে সেটি গোপন থাকে যতক্ষণ না <span class="path">Reviews</span> থেকে <b>Publish</b> করেন। শুধু নিবন্ধিত রোগী (মোবাইল নম্বর মিলিয়ে) রিভিউ দিতে পারেন।</div>
+  </div>
+  <div class="box tip"><strong>দুই ভাষা</strong>
+    প্রতিটি লেখার ইংরেজি ও বাংলা ঘর আছে। কোনো ঘর খালি রাখলে সেখানে আগে থেকে লেখা ডিফল্ট বাক্য দেখায়, তাই ওয়েবসাইটে কখনো ফাঁকা জায়গা থাকে না। ভিজিটর উপরের বোতাম দিয়ে ভাষা বদলাতে পারেন।
+  </div>
+</section>
+
+<!-- ============ 14 ============ -->
+<section class="chapter">
+  <h2><span class="num">১৪</span>ই-মেইল ও SMS সেটিংস</h2>
+  <h3>SMS (BulkSMSBD) — অ্যাপয়েন্টমেন্টের নিশ্চিতকরণ</h3>
+  <ol class="steps">
+    <li><span class="path">SMS Settings</span>-এ BulkSMSBD-এর <b>API key</b> ও অনুমোদিত <b>Sender ID</b> দিয়ে Save।</li>
+    <li><b>Test connection</b> চাপুন: ব্যালান্স দেখাবে, কোনো SMS যাবে না, খরচ নেই।</li>
+    <li>চাইলে নিজের নম্বরে <b>Test SMS</b> পাঠান (একটি SMS খরচ হবে)।</li>
+    <li>"Send appointment SMS" চালু করে Save। বার্তার লেখা নিজের মতো বদলানো যায় (<code>{name}</code>, <code>{date}</code>, <code>{time}</code>, <code>{clinic}</code> ব্যবহার করে); নিচে প্রিভিউ দেখায়।</li>
+  </ol>
+  <ul>
+    <li>খরচ ও অপব্যবহার ঠেকাতে সীমা আছে: প্রতি নম্বরে দিনে সর্বোচ্চ ৩টি, মোট দিনে ২০০টি (বদলানো যায়)।</li>
+    <li>SMS-এ চিকিৎসার নাম যায় না, শুধু নাম, তারিখ ও সময়।</li>
+    <li>History-তে প্রতিটি SMS-এর ফলাফল দেখা যায় (নম্বর আংশিক লুকানো)। ব্যালান্স শেষ হলে সেখানে কারণ লেখা থাকবে।</li>
+  </ul>
+
+  <h3>ই-মেইল (Gmail) — পাসওয়ার্ড উদ্ধারের কোড</h3>
+  <ol class="steps">
+    <li>Gmail অ্যাকাউন্টে <b>2-Step Verification</b> চালু করুন।</li>
+    <li>Google Account → Security → <b>App passwords</b> থেকে "Clinic system" নামে একটি ১৬ অক্ষরের পাসওয়ার্ড তৈরি করুন।</li>
+    <li><span class="path">Email &amp; SMTP Settings</span>-এ Gmail বেছে ই-মেইল ঠিকানা ও সেই app password দিয়ে Save।</li>
+    <li><b>Test connection</b> → নিজেকে <b>Test e-mail</b> → সফল হলে সার্ভিস চালু করুন।</li>
+  </ol>
+  <div class="box info"><strong>দুটো সেটিংসেই একই নিয়ম</strong>
+    সফল পরীক্ষা ছাড়া সার্ভিস চালু করা যায় না। Key বা পাসওয়ার্ড বদলালে আবার পরীক্ষা করতে হয়। সংরক্ষিত key বা পাসওয়ার্ড আর কখনো স্ক্রিনে দেখা যায় না; বদলাতে চাইলে শুধু নতুনটা লিখে দিন।
+  </div>
+</section>
+
+<!-- ============ 15 ============ -->
+<section class="chapter">
+  <h2><span class="num">১৫</span>দৈনিক, সাপ্তাহিক ও মাসিক রুটিন</h2>
+  <div class="grid2">
+    <div class="card"><h4>প্রতিদিন সকালে</h4><ul class="check"><li>Approval Requests নিশ্চিত/বাতিল</li><li>আজকের অ্যাপয়েন্টমেন্ট দেখা</li><li>Reminders থেকে আগামীকালের রোগীদের মনে করিয়ে দেওয়া</li><li>ইনভেন্টরির সতর্কতা দেখা</li></ul></div>
+    <div class="card"><h4>প্রতিদিন সন্ধ্যায়</h4><ul class="check"><li>সম্পন্ন ভিজিট Completed, না আসা No-show</li><li>দিনের খরচ লেখা</li><li>ক্যাশ গুনে Close the day</li><li>শেয়ার করা কম্পিউটারে Sign out</li></ul></div>
+    <div class="card"><h4>প্রতি সপ্তাহে</h4><ul class="check"><li>বকেয়া ইনভয়েস দেখে রোগীদের মনে করানো</li><li>নতুন রিভিউ Publish/Reject</li><li>SMS ব্যালান্স দেখা</li><li>কম স্টকের মাল অর্ডার</li></ul></div>
+    <div class="card"><h4>প্রতি মাসে</h4><ul class="check"><li>মাসিক রিপোর্ট ও লাভ/ক্ষতি দেখা, CSV সংরক্ষণ</li><li>স্টক গণনা মিলিয়ে Adjust</li><li>স্টাফ তালিকা দেখা, চলে যাওয়াদের Deactivate</li><li>ব্যাকআপ ঠিকমতো হচ্ছে কিনা আইটি থেকে নিশ্চিত হওয়া</li></ul></div>
+  </div>
+</section>
+
+<!-- ============ 16 ============ -->
+<section class="chapter">
+  <h2><span class="num">১৬</span>সাধারণ সমস্যা ও সমাধান</h2>
+  <table>
+    <tr><th style="width:36%">সমস্যা</th><th>সমাধান</th></tr>
+    <tr><td>কোনো মেনু দেখা যাচ্ছে না</td><td>ঐ কাজের অনুমতি আপনার রোলে নেই। অ্যাডমিনকে বলুন রোলে অনুমতি দিতে।</td></tr>
+    <tr><td>"You do not have permission" বার্তা</td><td>একই কারণ। রোল বদলানোর পর পাতা রিফ্রেশ করুন।</td></tr>
+    <tr><td>পাসওয়ার্ড ভুলে গেছি</td><td>লগইন পেজে "Forgot password?" (ই-মেইল চালু থাকলে), নইলে অ্যাডমিনকে Reset password করতে বলুন।</td></tr>
+    <tr><td>লগইন করা যাচ্ছে না, অ্যাকাউন্ট সঠিক</td><td>অ্যাকাউন্টটি Deactivate হতে পারে; অ্যাডমিন Users &amp; roles থেকে Activate করবেন।</td></tr>
+    <tr><td>ওয়েবসাইটে কোনো সময় খালি দেখাচ্ছে না</td><td>Doctors-এ সেই দিনের সময়সূচি দেওয়া আছে কিনা, এবং সেবাটি Services-এ সক্রিয় কিনা দেখুন।</td></tr>
+    <tr><td>"এই নম্বর থেকে আগেই অনুরোধ পাঠানো হয়েছে"</td><td>একই দিনে একই সেবার দ্বিতীয় বুকিং আটকানো হয়েছে। আগেরটি বাতিল করে নতুন করুন, বা আগেরটির সময় বদলান।</td></tr>
+    <tr><td>SMS যাচ্ছে না</td><td>SMS Settings-এর History দেখুন: ব্যালান্স কম (1007), key ভুল (1011), IP whitelist (1032) — কারণ সেখানে লেখা থাকে।</td></tr>
+    <tr><td>পাসওয়ার্ড উদ্ধারের কোড আসেনি</td><td>স্প্যাম ফোল্ডার দেখুন; Email Settings-এ সার্ভিস চালু ও শেষ টেস্ট সফল কিনা দেখুন। ১ মিনিট পর আবার কোড চাওয়া যায়।</td></tr>
+    <tr><td>ক্যাশ ক্লোজিংয়ে পার্থক্য</td><td>দিনের ক্যাশ পেমেন্ট, রিফান্ড ও ক্যাশ খরচ সব লেখা হয়েছে কিনা দেখুন; তারপর কারণ লিখে ক্লোজ করুন।</td></tr>
+    <tr><td>গ্যালারির ছবি দেখাচ্ছে না</td><td>ছবির লিংকটি পাবলিক কিনা দেখুন। Facebook-এর ছবির লিংক কিছুদিন পর কাজ করা বন্ধ করে; স্থায়ী লিংক ব্যবহার করুন।</td></tr>
+  </table>
+</section>
+
+<!-- ============ 17 ============ -->
+<section class="chapter">
+  <h2><span class="num">১৭</span>কারিগরি পরিশিষ্ট <span style="font-size:11pt;color:var(--ink-2)">(আইটি সহায়তাকারীর জন্য)</span></h2>
+  <h3>প্রযুক্তি</h3>
+  <table>
+    <tr><th style="width:30%">অংশ</th><th>প্রযুক্তি</th></tr>
+    <tr><td>ওয়েব অ্যাপ</td><td class="mono">Next.js 16.4 (App Router, Cache Components), React 19, TypeScript</td></tr>
+    <tr><td>ডেটাবেস</td><td class="mono">PostgreSQL (extension: pg_trgm), Prisma 7 ORM</td></tr>
+    <tr><td>লগইন</td><td class="mono">Better Auth (email + password, QR approval), DB sessions</td></tr>
+    <tr><td>UI</td><td class="mono">Tailwind CSS 4.3, React Hook Form + Zod, TanStack Query/Table, Sonner, date-fns</td></tr>
+    <tr><td>বাইরের সেবা</td><td class="mono">BulkSMSBD (HTTPS), Gmail SMTP (Nodemailer)</td></tr>
+  </table>
+
+  <h3>পরিবেশ চলক (.env) — গোপন রাখুন</h3>
+  <table>
+    <tr><th style="width:36%">নাম</th><th>কাজ</th></tr>
+    <tr><td><code>DATABASE_URL</code></td><td>PostgreSQL সংযোগ</td></tr>
+    <tr><td><code>BETTER_AUTH_SECRET</code></td><td>লগইন সেশনের গোপন কী (কমপক্ষে ৩২ অক্ষর, এলোমেলো)</td></tr>
+    <tr><td><code>BETTER_AUTH_URL</code></td><td>সাইটের ঠিকানা, যেমন <code>https://drovi.example.com</code></td></tr>
+    <tr><td><code>EMAIL_ENCRYPTION_KEY</code></td><td>SMTP পাসওয়ার্ড ও SMS key এনক্রিপ্ট করার কী (৩২ বাইট, base64)। <b>হারালে</b> সংরক্ষিত key আর পড়া যাবে না, আবার দিতে হবে।</td></tr>
+    <tr><td><code>EMAIL_ENCRYPTION_KEY_PREVIOUS</code></td><td>শুধু কী বদলানোর সময় পুরোনোটা রাখতে</td></tr>
+    <tr><td><code>TRUSTED_PROXY_HOPS</code></td><td>অ্যাপের সামনে কয়টি proxy (Nginx/Cloudflare) আছে; সাধারণত ১</td></tr>
+    <tr><td><code>ADMIN_NAME</code>, <code>ADMIN_EMAIL</code></td><td>প্রথম অ্যাডমিন তৈরির সময়</td></tr>
+  </table>
+
+  <h3>সার্ভারে চালানো ও আপডেট</h3>
+  <table>
+    <tr><th style="width:42%">কমান্ড</th><th>কাজ</th></tr>
+    <tr><td><code>pnpm install</code></td><td>প্যাকেজ ইনস্টল</td></tr>
+    <tr><td><code>pnpm exec prisma migrate deploy</code></td><td>ডেটাবেসে নতুন পরিবর্তন প্রয়োগ (আগে ব্যাকআপ নিন)</td></tr>
+    <tr><td><code>pnpm build</code> তারপর <code>pnpm start</code></td><td>প্রোডাকশন বিল্ড ও চালু</td></tr>
+    <tr><td><code>pnpm db:seed</code></td><td>প্রথম অ্যাডমিন তৈরি (পাসওয়ার্ড টার্মিনালে চাইবে)</td></tr>
+    <tr><td><code>pnpm admin:reset-password</code></td><td>অ্যাডমিনের পাসওয়ার্ড রিসেট (সব লগইন বন্ধ হবে)</td></tr>
+    <tr><td><code>pnpm test:db:prepare</code> ও <code>pnpm test</code></td><td>স্বয়ংক্রিয় পরীক্ষা (আলাদা <code>_test</code> ডেটাবেসে; ২৭০+ টেস্ট)</td></tr>
+  </table>
+
+  <h3>ব্যাকআপ ও পুনরুদ্ধার</h3>
+  <ul>
+    <li>সব তথ্য PostgreSQL-এ; ফাইল আপলোড নেই (ছবি শুধু লিংক)। তাই ডেটাবেস ব্যাকআপই পুরো ব্যাকআপ।</li>
+    <li>প্রতিদিন <code>pg_dump</code> চালান এবং কপি সার্ভারের বাইরে (ক্লাউড/অন্য ডিস্কে) রাখুন। প্রতিটি আপডেটের আগে আলাদা ব্যাকআপ নিন।</li>
+    <li>পুনরুদ্ধার: খালি ডেটাবেসে restore করে <code>prisma migrate deploy</code> চালান।</li>
+    <li><code>.env</code> ফাইল (বিশেষ করে <code>EMAIL_ENCRYPTION_KEY</code> ও <code>BETTER_AUTH_SECRET</code>) আলাদা নিরাপদ জায়গায় সংরক্ষণ করুন।</li>
+  </ul>
+
+  <h3>প্রোডাকশন চেকলিস্ট</h3>
+  <ul class="check">
+    <li>HTTPS সহ ডোমেইন; <code>BETTER_AUTH_URL</code> সেই ঠিকানায়</li>
+    <li><code>TRUSTED_PROXY_HOPS</code> proxy-র সংখ্যা অনুযায়ী</li>
+    <li>BulkSMSBD-তে IP whitelist চালু থাকলে সার্ভারের IP যোগ</li>
+    <li>Content-Security-Policy এখন "Report-Only" মোডে; কয়েক দিন ব্রাউজার কনসোলে সতর্কতা না এলে enforce করুন (<code>next.config.ts</code>)</li>
+    <li>দৈনিক স্বয়ংক্রিয় ব্যাকআপ চালু ও একবার restore করে পরীক্ষিত</li>
+  </ul>
+  <p class="small">বিস্তারিত কারিগরি নথি প্রজেক্টের ভেতরে: <code>README.md</code>, <code>ARCHITECTURE.md</code>, <code>API_DOCUMENTATION.md</code>, <code>DATABASE.md</code>, <code>DESIGN_SYSTEM.md</code>।</p>
+</section>
+
+<!-- ============ 18 ============ -->
+<section class="chapter">
+  <h2><span class="num">১৮</span>হস্তান্তর স্বীকৃতি</h2>
+  <p>নিচের বিষয়গুলো হস্তান্তরের সময় বুঝিয়ে দেওয়া ও গ্রহণ করা হয়েছে:</p>
+  <table>
+    <tr><th style="width:8%">✓</th><th>বিষয়</th></tr>
+    <tr><td></td><td>সম্পূর্ণ সোর্স কোড ও কারিগরি নথি</td></tr>
+    <tr><td></td><td>সার্ভার, ডোমেইন ও ডেটাবেসের প্রবেশাধিকার</td></tr>
+    <tr><td></td><td>অ্যাডমিন অ্যাকাউন্ট (প্রথম লগইনের পর পাসওয়ার্ড বদলানো হয়েছে)</td></tr>
+    <tr><td></td><td><code>.env</code>-এর গোপন মানগুলো নিরাপদে হস্তান্তর</td></tr>
+    <tr><td></td><td>BulkSMSBD API key নতুন করে তৈরি ও বসানো</td></tr>
+    <tr><td></td><td>Gmail app password ও ই-মেইল সার্ভিস পরীক্ষিত</td></tr>
+    <tr><td></td><td>ব্যাকআপ ব্যবস্থা চালু ও পরীক্ষিত</td></tr>
+    <tr><td></td><td>স্টাফদের প্রশিক্ষণ (এই নির্দেশিকা অনুযায়ী)</td></tr>
+  </table>
+  <div class="sign">
+    <div><b>হস্তান্তরকারী</b><br>নাম:<br>তারিখ:</div>
+    <div><b>গ্রহণকারী (Dr Ovi's Dental Care)</b><br>নাম:<br>তারিখ:</div>
+  </div>
+  <div class="box tip" style="margin-top:12mm"><strong>ধন্যবাদ</strong>
+    সিস্টেম ব্যবহারে কোনো প্রশ্ন বা নতুন প্রয়োজন হলে এই নির্দেশিকার অধ্যায় নম্বর উল্লেখ করে যোগাযোগ করুন; সমস্যা দ্রুত বোঝা ও সমাধান সহজ হবে।
+  </div>
+</section>
+
+</body>
+</html>

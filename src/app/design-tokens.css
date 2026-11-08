@@ -1,0 +1,152 @@
+/* ==================================================================
+   Design tokens: the single source of truth for spacing, type, radius, elevation, motion,
+   layering and status colours. New CSS should use these variables instead of raw numbers and
+   hex codes; older rules are being moved over gradually. See DESIGN_SYSTEM.md.
+
+   Breakpoints (media queries cannot read variables, so they are written out):
+     sm  520px   large phones          md  760px   tablets and below: the sidebar becomes a drawer
+     lg 1100px   small laptops         xl 1600px   wide screens
+   ================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* Spacing: a 4px base. Use for margin, padding and gap. */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  /* Space between page sections and inside cards. */
+  --section-gap: var(--space-6);
+  --card-padding: var(--space-5);
+  --page-gutter: clamp(var(--space-4), 3vw, var(--space-8));
+
+  /* Type scale. Fluid from phone to desktop; nothing below 12px so small print stays readable. */
+  --fs-xs: 0.75rem; /* 12px: captions, badges */
+  --fs-sm: 0.8125rem; /* 13px: table cells, helper text */
+  --fs-base: 0.875rem; /* 14px: body text in the dashboard */
+  --fs-md: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem); /* 15-16px */
+  --fs-lg: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+  --fs-xl: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --fs-2xl: clamp(1.5rem, 1.2rem + 1.4vw, 2.25rem);
+  --fs-3xl: clamp(1.875rem, 1.4rem + 2.2vw, 3rem);
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --lh-tight: 1.25;
+  --lh-snug: 1.4;
+  --lh-normal: 1.55;
+  --lh-relaxed: 1.7; /* Bangla text and long paragraphs */
+  --ls-tight: -0.02em;
+  --ls-wide: 0.06em;
+  --ls-caps: 0.1em;
+  --measure: 68ch; /* the longest comfortable line of reading text */
+
+  /* Shape. */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 8px; /* inputs, buttons */
+  --r-lg: 12px; /* cards, modals */
+  --r-xl: 16px;
+  --r-full: 999px;
+  --border-width: 1px;
+  --border-width-strong: 2px;
+
+  /* Elevation: each step is a little higher and softer. */
+  --shadow-1: 0 1px 2px rgb(35 23 15 / 6%), 0 1px 3px rgb(35 23 15 / 4%);
+  --shadow-2: 0 2px 6px rgb(35 23 15 / 7%), 0 8px 18px rgb(35 23 15 / 5%);
+  --shadow-3: 0 8px 24px rgb(35 23 15 / 12%), 0 2px 6px rgb(35 23 15 / 6%);
+  --shadow-4: 0 20px 50px rgb(35 23 15 / 20%), 0 6px 16px rgb(35 23 15 / 10%);
+  --focus-ring: 0 0 0 3px rgb(234 88 12 / 35%);
+
+  /* Layering: one scale, so nothing fights over z-index numbers. */
+  --z-base: 0;
+  --z-sticky: 10;
+  --z-sidebar: 20;
+  --z-overlay: 30;
+  --z-modal: 40;
+  --z-toast: 50;
+  --z-skip-link: 100;
+
+  /* Motion. */
+  --duration-fast: 120ms;
+  --duration-base: 180ms;
+  --duration-slow: 300ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-decel: cubic-bezier(0, 0, 0.2, 1);
+
+  /* Brand colours. */
+  --brand-50: #fff7ed;
+  --brand-100: #ffedd5;
+  --brand-500: #f97316;
+  --brand-600: #ea580c;
+  --brand-700: #c2410c;
+  --brand-800: #9a3412;
+  --accent: #2563eb;
+
+  /* Surfaces, text and borders (light). */
+  --surface-page: #f5f3f1;
+  --surface-1: #ffffff;
+  --surface-2: #faf8f7;
+  --surface-3: #f3efed;
+  --text-1: #1f2c40; /* 14.8:1 on --surface-1 */
+  --text-2: #4a5668; /* 7.3:1 */
+  --text-3: #5f6b7a; /* 5.3:1: the faintest text allowed */
+  --border-1: #e5e0dc;
+  --border-2: #d0c8c3;
+
+  /* Status colours. Each has a soft background, a border and a text colour that passes 4.5:1 on it. */
+  --success-bg: #e3f6ec;
+  --success-border: #a6dbbf;
+  --success-text: #0f6a3e;
+  --warning-bg: #fff3d6;
+  --warning-border: #f0d08a;
+  --warning-text: #7a4f00;
+  --danger-bg: #fde8e6;
+  --danger-border: #f2b8b3;
+  --danger-text: #9a2f29;
+  --info-bg: #e3eefc;
+  --info-border: #b3cdf3;
+  --info-text: #1e4f9a;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --shadow-1: 0 1px 2px rgb(0 0 0 / 40%);
+  --shadow-2: 0 2px 8px rgb(0 0 0 / 40%), 0 8px 18px rgb(0 0 0 / 25%);
+  --shadow-3: 0 8px 24px rgb(0 0 0 / 50%), 0 2px 6px rgb(0 0 0 / 30%);
+  --shadow-4: 0 20px 50px rgb(0 0 0 / 60%), 0 6px 16px rgb(0 0 0 / 40%);
+  --focus-ring: 0 0 0 3px rgb(251 146 60 / 40%);
+
+  --surface-page: #1a2027;
+  --surface-1: #232b34;
+  --surface-2: #2a333d;
+  --surface-3: #323d48;
+  --text-1: #eef1f4; /* 13.6:1 on --surface-1 */
+  --text-2: #c3ccd5;
+  --text-3: #a3afbb; /* 6.4:1 */
+  --border-1: #414b56;
+  --border-2: #566270;
+
+  --success-bg: #17382a;
+  --success-border: #2c6a4c;
+  --success-text: #86e0ae;
+  --warning-bg: #3b2f1a;
+  --warning-border: #6b5222;
+  --warning-text: #f1c577;
+  --danger-bg: #3d2220;
+  --danger-border: #7a3a35;
+  --danger-text: #f4b0aa;
+  --info-bg: #1c2f4a;
+  --info-border: #36588c;
+  --info-text: #9cc3f5;
+}
