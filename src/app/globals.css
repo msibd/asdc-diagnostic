@@ -7488,6 +7488,18 @@ html[data-theme="dark"] body:has([data-public-site]) {
   }
 }
 
+/* Full HD (1920x1080) and wider: use more of the screen. Smaller screens are unchanged. */
+@media (min-width: 1700px) {
+  [data-public-site] {
+    --site-container: 96rem;
+    --site-gutter: 3rem;
+  }
+
+  [data-public-site] .max-w-7xl {
+    max-width: var(--site-container);
+  }
+}
+
 .site-container {
   margin-inline: auto;
   width: 100%;
