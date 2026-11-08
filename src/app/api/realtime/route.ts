@@ -1,9 +1,12 @@
-import { NextResponse } from "next/server";
+import { NextResponse, connection } from "next/server";
 import { authorize } from "@/lib/admin-session";
 import { subscribeToClinicChanges } from "@/lib/clinic-realtime";
 import { logger } from "@/lib/logger";
 
 export async function GET(request: Request) {
+  // Per-request only: without this the Vercel branch below reads no request data, so the build tries
+  // to pre-render it and fails ("Invalid response status code 204").
+  await connection();
   // Serverless instances cannot hold a PostgreSQL LISTEN connection each without exhausting the pooler.
   // 204 tells EventSource to stop reconnecting; the pages then refresh on their polling fallback.
   if (process.env.VERCEL) return new Response(null, { status: 204 });
