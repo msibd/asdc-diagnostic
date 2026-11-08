@@ -4,6 +4,10 @@ import { subscribeToClinicChanges } from "@/lib/clinic-realtime";
 import { logger } from "@/lib/logger";
 
 export async function GET(request: Request) {
+  // Serverless instances cannot hold a PostgreSQL LISTEN connection each without exhausting the pooler.
+  // 204 tells EventSource to stop reconnecting; the pages then refresh on their polling fallback.
+  if (process.env.VERCEL) return new Response(null, { status: 204 });
+
   const access = await authorize(request.headers, "dashboard:read");
   if (!access.session) return NextResponse.json({ error: access.error }, { status: access.status });
 
